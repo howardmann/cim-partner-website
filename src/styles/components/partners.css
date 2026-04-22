@@ -1,0 +1,39 @@
+/* ============================================================
+   partners.css — 3-column "how we partner" grid of persona cards
+   with a small accent-colored monogram icon.
+   ============================================================ */
+
+@layer components {
+  .partner-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  /* Flat card, sharp corners, identified by a top accent rule
+     rather than a monogram icon block. */
+  .partner-card {
+    padding: 28px 24px 32px;
+    border-top: 2px solid var(--color-ink);
+    background: transparent;
+    transition: border-top-color 0.2s ease;
+  }
+
+  .partner-card:hover {
+    border-top-color: var(--color-accent);
+  }
+
+  .partner-card h3 {
+    font-size: 19px;
+    font-weight: 600;
+    margin: 8px 0 10px;
+    letter-spacing: -0.01em;
+  }
+
+  .partner-card p {
+    font-size: 14.5px;
+    color: var(--color-muted);
+    margin: 0;
+    line-height: 1.6;
+  }
+}

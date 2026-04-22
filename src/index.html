@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PEAK — The fully-managed FDD and MBCx platform for services firms</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Built Tailwind + components CSS. Run `npm run build` to regenerate. -->
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV — sticky top bar with brand + section links + CTAs.
+       Styles: styles/components/nav.css
+       ============================================================ -->
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#" aria-label="CIM PEAK">
+        <img src="./assets/cim-logo.svg" alt="CIM" />
+        <span class="product">PEAK</span>
+      </a>
+      <div class="nav-links">
+        <a href="#shift">The shift</a>
+        <a href="#platform">Platform</a>
+        <a href="#economics">Economics</a>
+        <a href="#partners">Partners</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn ghost sm" href="#fit">Partner fit call</a>
+        <a class="btn sm" href="#apply">Apply <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO — two-column hero with copy + floating cards visual.
+       Styles: styles/components/hero.css
+       ============================================================ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Partner program · FDD &amp; MBCx</div>
+        <h1 class="display">
+          We've built the <em>future of building performance automation</em>.
+          <span class="deliver-mark">Come deliver it</span>.
+        </h1>
+        <p class="hero-lead">The <span class="ai-mark">AI team</span> your firm doesn't need to build.</p>
+        <p class="hero-sub">
+          PEAK is the fully-managed FDD, analytics, and compliance platform RCx and MBCx firms use
+          to deliver outcomes at a scale their headcount can't reach. Your engineers walk into
+          deployed sites, not integration projects. Your clients interrogate their buildings
+          through Claude, GPT, or Copilot. Your Compliance Agent triages and closes out faults
+          while your team sleeps.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#apply">Apply to the partner program <span class="arrow">→</span></a>
+          <a class="btn ghost" href="#fit">Book a partner fit call</a>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-card c1">
+          <div class="label">Auto-commissioning</div>
+          <div class="val"><span class="dot"></span>BMS connected · 1,284 points tagged</div>
+        </div>
+        <div class="hero-card c2">
+          <div class="label">Fault — priority high</div>
+          <div class="val"><span class="dot red"></span>AHU-3 simultaneous heat/cool</div>
+        </div>
+        <div class="hero-card c3">
+          <div class="label">Compliance agent</div>
+          <div class="val"><span class="dot"></span>Triaged · Assigned · Chasing close-out</div>
+        </div>
+        <div class="hero-card c4">
+          <div class="label">LLM query</div>
+          <div class="val mono" style="font-size:12px">"kWh savings QTD per site?"</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SHIFT — 3-col grid of market-shift cards.
+       Styles: styles/components/shift.css
+       ============================================================ -->
+  <section class="block" id="shift">
+    <div class="wrap">
+      <div class="eyebrow">The market shift</div>
+      <h2 class="section-h">The shift your clients are asking you to deliver.</h2>
+      <p class="section-sub">
+        Your clients are no longer buying audits. They're buying outcomes — continuous savings,
+        proven fault close-out, and auditable ESG performance. The service model has moved.
+      </p>
+
+      <div class="shift">
+        <div class="shift-cell">
+          <div class="shift-from">RCx <span class="arrow-right">→</span> MBCx</div>
+          <h3 class="shift-title">Point-in-time to continuous</h3>
+          <p class="shift-desc">
+            Commissioning is becoming continuous, monitoring-based commissioning on multi-year
+            retainers.
+          </p>
+        </div>
+        <div class="shift-cell">
+          <div class="shift-from">Scheduled <span class="arrow-right">→</span> Predictive</div>
+          <h3 class="shift-title">Fault-driven work orders</h3>
+          <p class="shift-desc">
+            Calendar-driven truck rolls are becoming fault-driven, prioritised work orders.
+          </p>
+        </div>
+        <div class="shift-cell">
+          <div class="shift-from">Reports <span class="arrow-right">→</span> Live</div>
+          <h3 class="shift-title">Live accountability</h3>
+          <p class="shift-desc">
+            Quarterly PDFs are becoming dashboards your clients check daily.
+          </p>
+        </div>
+      </div>
+
+      <p class="closer">
+        Every RCx/MBCx firm, engineering consultancy, and BMS/mechanical contractor has to cross
+        this line this decade. The question is whether you cross it by
+        <strong>hiring a software team</strong> — or by
+        <strong>partnering with one already on the other side</strong>.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STUCK — two-column split (copy + numbered list) + callout.
+       Styles: styles/components/stuck.css
+       ============================================================ -->
+  <section class="block alt">
+    <div class="wrap">
+      <div class="split">
+        <div>
+          <div class="eyebrow">Why it's hard to cross alone</div>
+          <h2 class="section-h">Firms that try to cross alone get stuck.</h2>
+          <p class="section-sub">
+            Building the platform a modern MBCx contract demands is a multi-year software job.
+            It requires, minimum:
+          </p>
+        </div>
+        <div>
+          <ol class="stuck-list">
+            <li>
+              <span class="num">01</span>
+              <span>A normalised data layer across every BMS protocol in your portfolio.</span>
+            </li>
+            <li>
+              <span class="num">02</span>
+              <span>A tagging and modelling stack that doesn't need hand-assembly on every site.</span>
+            </li>
+            <li>
+              <span class="num">03</span>
+              <span>A fault detection library battle-tested across thousands of assets.</span>
+            </li>
+            <li>
+              <span class="num">04</span>
+              <span>An alert-to-action workflow your clients will actually live inside.</span>
+            </li>
+            <li>
+              <span class="num">05</span>
+              <span>An AI investment budget that keeps compounding while your competitors catch up.</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="callout">
+        A tagging framework is <strong>not a platform</strong>. A rules editor is
+        <strong>not a delivered capability</strong>. A data layer is <strong>not a platform</strong>
+        either. What a modern services firm needs is a delivered, managed capability their team
+        walks into on day one.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PLATFORM — dark intro panel + 4-col "shipping today" grid
+       + 2-col "shipping later" roadmap.
+       Styles: styles/components/platform.css
+       ============================================================ -->
+  <section class="block" id="platform">
+    <div class="wrap">
+      <div class="eyebrow">What PEAK is</div>
+      <h2 class="section-h">
+        A fully-managed FDD and MBCx platform. Priced per point, per year. Deployed turnkey.
+      </h2>
+      <p class="section-sub">
+        CIM operates the hosting, the onboarding, the tagging, and 24/5 technical support.
+        Your firm operates the client relationship, the retainer, and the outcomes.
+      </p>
+
+      <!-- Dark inverted intro panel -->
+      <div class="peak-intro">
+        <div>
+          <h3>One platform. Two divisions of labour.</h3>
+          <p>
+            We make the AI investment no services firm can justify internally. You keep the
+            relationship, the margin, and the renewal.
+          </p>
+        </div>
+        <div class="peak-split">
+          <div class="row"><span>CIM operates</span><span>Platform, hosting, 24/5 support</span></div>
+          <div class="row"><span>CIM operates</span><span>Onboarding, tagging, auto-commissioning</span></div>
+          <div class="row"><span>Partner operates</span><span>Client relationship, retainer</span></div>
+          <div class="row"><span>Partner operates</span><span>Outcomes, renewal</span></div>
+        </div>
+      </div>
+
+      <!-- Shipping today -->
+      <div class="stage-label"><span class="ship">Shipping today</span></div>
+      <div class="feat-grid">
+        <div class="feat">
+          <div class="feat-num">01</div>
+          <h4>Fully-managed auto-commissioning</h4>
+          <p>
+            Our team connects to the BMS, discovers the point list, and stands up a working FDD
+            deployment in hours — not weeks.
+          </p>
+        </div>
+        <div class="feat">
+          <div class="feat-num">02</div>
+          <h4>ML metadata prediction</h4>
+          <p>
+            Proprietary model auto-tags points across manufacturers and protocols. No six-month
+            tagging project.
+          </p>
+        </div>
+        <div class="feat">
+          <div class="feat-num">03</div>
+          <h4>Expert-system FDD</h4>
+          <p>
+            Rules library refined across millions of square feet of deployed assets. Patterns
+            proven, not postulated.
+          </p>
+        </div>
+        <div class="feat">
+          <div class="feat-num">04</div>
+          <h4>MCP + AI skills</h4>
+          <p>
+            Your engineers and clients interrogate PEAK through Claude, GPT, or Copilot — the LLMs
+            they already use.
+          </p>
+        </div>
+      </div>
+
+      <!-- Shipping later -->
+      <div class="stage-label"><span class="later">Shipping later this year</span></div>
+      <div class="roadmap">
+        <div class="feat">
+          <div class="feat-num">Q4 2026</div>
+          <h4>Autonomous Compliance Agent</h4>
+          <p>
+            Triages faults, assigns ownership, chases close-out, and drives the completion rates
+            MBCx retainers live or die on. Early partner deployments running today.
+          </p>
+        </div>
+        <div class="feat">
+          <div class="feat-num">On deck</div>
+          <h4>Public roadmap accountability</h4>
+          <p>
+            Every forward-looking capability on this page carries a shipping date. If a date slips,
+            we move it publicly — not quietly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PITCH — 2-col grid of BD-ready pitch lines + callout.
+       Styles: styles/components/pitch.css
+       ============================================================ -->
+  <section class="block alt">
+    <div class="wrap">
+      <div class="eyebrow">The partner pitch</div>
+      <h2 class="section-h">Lines your BD lead can say on Tuesday.</h2>
+      <p class="section-sub">
+        Every one of these is a sentence your competitors — still selling hours, still running
+        static toolkits, still staffing engineers into bottlenecks — cannot answer.
+      </p>
+
+      <div class="pitch-grid">
+        <div class="pitch">
+          <span class="tag">Time to value</span>
+          "We stand up continuous FDD on your portfolio in weeks, not months."
+        </div>
+        <div class="pitch">
+          <span class="tag">Fault knowledge</span>
+          "Every fault pattern in your Melbourne asset is already known from the other buildings we run."
+        </div>
+        <div class="pitch">
+          <span class="tag">AI-native UX</span>
+          "Your facility team asks questions in Claude or ChatGPT — the tools they already use —
+          and gets grounded answers with receipts."
+        </div>
+        <div class="pitch">
+          <span class="tag">Close-out</span>
+          "We don't just find faults. Our agent triages, assigns, and chases close-out."
+        </div>
+        <div class="pitch">
+          <span class="tag">Commercial</span>
+          "Your analytics platform is included in our MBCx retainer. No separate software line item
+          to defend."
+        </div>
+        <div class="pitch">
+          <span class="tag">Compounding value</span>
+          "Every quarter, your buildings get smarter — without a project, without a change order."
+        </div>
+      </div>
+
+      <div class="callout">
+        Your best engineer can now oversee a portfolio of <strong>hundreds</strong> of buildings
+        instead of <strong>tens</strong>. Your firm scales capacity without scaling headcount.
+        That is the partnership.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ECONOMICS — copy on left, price card on right.
+       Styles: styles/components/economics.css
+       ============================================================ -->
+  <section class="block" id="economics">
+    <div class="wrap">
+      <div class="econ">
+        <div>
+          <div class="eyebrow">Partner economics</div>
+          <h2 class="section-h">Simple. One number, one unit, fully managed.</h2>
+          <p class="section-sub">
+            We share the number on a partner fit call, because the economics only make sense
+            alongside the deployment model — and the deployment model only makes sense alongside
+            your portfolio.
+          </p>
+          <a class="btn" href="#fit">Book a partner fit call <span class="arrow">→</span></a>
+        </div>
+        <div class="price-card">
+          <div class="price-head">Wholesale · Per point · Per year</div>
+          <div class="price-big">$<span>—</span></div>
+          <div class="price-unit">Shared on partner fit call</div>
+          <ul class="price-incl">
+            <li>Full feature set, always</li>
+            <li>24/5 technical support</li>
+            <li>Fully-managed onboarding &amp; tagging</li>
+            <li>Hosting &amp; platform operations</li>
+          </ul>
+          <div class="price-fine">
+            Partner retains everything above wholesale, plus all services revenue: deployment
+            engineering, MBCx programme delivery, fault triage, client reporting, retainers.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PARTNERS — 3-col persona cards.
+       Styles: styles/components/partners.css
+       ============================================================ -->
+  <section class="block alt">
+    <div class="wrap">
+      <div class="eyebrow">How we partner</div>
+      <h2 class="section-h">Partner-first globally. Transparent in Australia.</h2>
+      <p class="section-sub">
+        Outside Australia, CIM does not sell PEAK direct. Every deployment is a partner deployment.
+        In our home market, CIM works directly with Heads of Operations at large portfolio owners
+        who run operations in-house. For owners who outsource operations, we refer to partners.
+        Named-account boundaries are <strong>written into the partner agreement</strong>, not
+        hidden in it.
+      </p>
+
+      <div class="partner-grid" id="partners">
+        <div class="partner-card">
+          <h3>RCx &amp; MBCx firms</h3>
+          <p>
+            The audience PEAK is built for. Scale past the hero-engineer ceiling without hiring
+            another one.
+          </p>
+        </div>
+        <div class="partner-card">
+          <h3>Engineering consultancies</h3>
+          <p>Convert one-off audits into recurring MBCx retainers your clients renew.</p>
+        </div>
+        <div class="partner-card">
+          <h3>BMS &amp; mechanical contractors</h3>
+          <p>
+            Add predictive maintenance and AI-backed service lines on top of your existing dispatch
+            business.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LOGOS + QUOTE + STATS — three related visual blocks.
+       Styles: styles/components/logos-stats.css
+       ============================================================ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="eyebrow">Partners delivering PEAK today</div>
+      <h2 class="section-h mb-12">The firms already on the other side of the line.</h2>
+
+      <div class="logos">
+        <div class="logo-cell">Aero Performance Group<small>United States</small></div>
+        <div class="logo-cell">Smart Managed Solutions<small>United Kingdom</small></div>
+        <div class="logo-cell">Hoffman Building Technologies<small>United States</small></div>
+        <div class="logo-cell">CSR Sustain<small>Australia</small></div>
+      </div>
+
+      <div class="quote">
+        "We deliver MBCx contracts our team couldn't have resourced a year ago. Energy reductions
+        averaging [X]% across [N] sites."
+        <div class="attr">— [Partner principal name, title]</div>
+      </div>
+
+      <div class="eyebrow">Platform at a glance</div>
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num"><span>[N]</span></div>
+          <div class="stat-label">Buildings live across [P] countries</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><span>[M]M</span></div>
+          <div class="stat-label">Square feet under continuous monitoring</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><span>[K]M</span></div>
+          <div class="stat-label">Points streaming</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num"><span>[J]</span></div>
+          <div class="stat-label">Faults closed by partners in the last 12 months</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FINAL CTA — centered closing action block.
+       Styles: styles/components/final-cta.css
+       ============================================================ -->
+  <section class="final-cta" id="apply">
+    <div class="wrap">
+      <div class="eyebrow">Come deliver it</div>
+      <h2>Cross the line with a platform, <br />not a toolkit.</h2>
+      <p>
+        Apply to the partner program, or book a partner fit call to see the deployment model and
+        wholesale economics.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#">Apply to the partner program <span class="arrow">→</span></a>
+        <a class="btn ghost" href="#" id="fit">Book a partner fit call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER — dark footer with brand + link columns + fine print.
+       Styles: styles/components/footer.css
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-col foot-brand">
+          <div class="brand">
+            <img src="./assets/cim-logo-white.svg" alt="CIM" />
+            <span class="product">PEAK</span>
+          </div>
+          <p>
+            The fully-managed FDD and MBCx platform services firms deliver outcomes on.
+            Built by CIM.
+          </p>
+        </div>
+        <div class="foot-col">
+          <h3>Platform</h3>
+          <ul>
+            <li><a href="#">Auto-commissioning</a></li>
+            <li><a href="#">FDD rules library</a></li>
+            <li><a href="#">AI skills (MCP)</a></li>
+            <li><a href="#">Compliance Agent</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h3>Partners</h3>
+          <ul>
+            <li><a href="#">Partner program</a></li>
+            <li><a href="#">Economics</a></li>
+            <li><a href="#">Partner fit call</a></li>
+            <li><a href="#">Case studies</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About CIM</a></li>
+            <li><a href="#">Roadmap</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <div>© CIM Enviro. PEAK is a product of CIM.</div>
+        <div>Built for RCx and MBCx firms.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

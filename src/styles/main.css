@@ -1,0 +1,71 @@
+/* ============================================================
+   main.css — Tailwind entry + design tokens + component imports.
+   Build: npm run build  (outputs to ../styles.css)
+   Dev:   npm run dev    (watch mode)
+   ============================================================ */
+
+@import "tailwindcss";
+
+/* Tell Tailwind where to look for utility classes. */
+@source "../**/*.html";
+
+/* Block Tailwind's built-in .container utility.
+   We use .wrap in base.css as our page-width wrapper; auto-detection
+   otherwise picks up "container" from our CSS variable name (--container-max)
+   and generates a utility that overrides .wrap at responsive breakpoints. */
+@source not inline("container");
+
+/* ------------------------------------------------------------
+   Design tokens — the single source of truth for PEAK's brand.
+   Exposed as CSS variables AND as Tailwind utilities
+   (bg-ink, text-accent, font-mono, etc.) via @theme.
+   ------------------------------------------------------------ */
+@theme {
+  --color-ink:          #0a0a0a;
+  --color-ink-2:        #1f1f1f;
+  --color-bg-alt:       #f6f6f4;
+  --color-muted:        #5a5a58;
+  --color-line:         #e6e4de;
+  --color-line-strong:  #cfccc3;
+  --color-accent:       #0f6b4d;
+  --color-accent-soft:  #e7f2ed;
+  --color-accent-ink:   #0a4a35;
+  --color-amber:        #d97706;
+  --color-danger:       #dc2626;
+
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --radius: 4px;
+  --container-max: 1180px;
+}
+
+/* ------------------------------------------------------------
+   Base layer — body defaults, resets, typography basics.
+   ------------------------------------------------------------ */
+@import "./base.css";
+
+/* ------------------------------------------------------------
+   Component layer — one file per logical component group.
+   Order: shared primitives → page-section components → footer.
+   ------------------------------------------------------------ */
+@import "./components/eyebrow.css";
+@import "./components/buttons.css";
+@import "./components/sections.css";
+@import "./components/nav.css";
+@import "./components/hero.css";
+@import "./components/shift.css";
+@import "./components/stuck.css";
+@import "./components/platform.css";
+@import "./components/pitch.css";
+@import "./components/economics.css";
+@import "./components/partners.css";
+@import "./components/logos-stats.css";
+@import "./components/final-cta.css";
+@import "./components/footer.css";
+
+/* ------------------------------------------------------------
+   Responsive overrides — grouped so every breakpoint
+   decision is visible in one place.
+   ------------------------------------------------------------ */
+@import "./responsive.css";

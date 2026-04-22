@@ -1,0 +1,162 @@
+/* ============================================================
+   platform.css — "What PEAK is" section. Three sub-components:
+     1. .peak-intro    — dark inverted intro panel
+     2. .stage-label   — mono label with a trailing hairline
+     3. .feat-grid / .roadmap — 4-col and 2-col feature grids
+        (1px gaps revealed via background-color trick)
+   ============================================================ */
+
+@layer components {
+  /* --- Dark inverted intro panel --- */
+  .peak-intro {
+    background: var(--color-ink);
+    color: #ffffff;
+    padding: 40px 48px;
+    border-radius: 4px;
+    margin-bottom: 64px;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .peak-intro h3 {
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    font-weight: 600;
+    margin: 0 0 12px;
+  }
+
+  .peak-intro p {
+    color: #c9c7c0;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .peak-split {
+    border-left: 1px solid #2b2b2b;
+    padding-left: 40px;
+  }
+
+  .peak-split .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 14px;
+    border-bottom: 1px solid #1f1f1f;
+  }
+
+  .peak-split .row:last-child {
+    border-bottom: 0;
+  }
+
+  .peak-split .row span:first-child {
+    color: #8d8b84;
+  }
+
+  .peak-split .row span:last-child {
+    font-weight: 500;
+  }
+
+  /* --- Stage labels ("Shipping today" / "Shipping later") ---
+     Human-designer treatment: small uppercase sans with a trailing
+     hairline. No dot-prefix bullet, no mono — those read AI-generic. */
+  .stage-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-ink-2);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 0 0 24px;
+  }
+
+  /* Hairline that fills the remaining row. */
+  .stage-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--color-line);
+  }
+
+  .stage-label .ship,
+  .stage-label .later { color: var(--color-ink-2); }
+
+  /* Colored tab to the left of the label text, replacing the bullet. */
+  .stage-label .ship::before,
+  .stage-label .later::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 2px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: var(--color-accent);
+  }
+  .stage-label .later::before { background: var(--color-amber); }
+
+  /* --- Feature grids: gap:1px + background-color reveals dividers --- */
+  .feat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--color-line);
+    border: 1px solid var(--color-line);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 48px;
+  }
+
+  .feat {
+    background: #ffffff;
+    padding: 28px;
+  }
+
+  .feat-num {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--color-accent);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+  }
+
+  .feat h4 {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    line-height: 1.3;
+  }
+
+  .feat p {
+    font-size: 13.5px;
+    color: var(--color-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  /* Roadmap = 2-col variant with alt bg + amber numbering. */
+  .roadmap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--color-line);
+    border: 1px solid var(--color-line);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .roadmap .feat      { background: var(--color-bg-alt); }
+  .roadmap .feat-num  { color: var(--color-amber); }
+
+  .note {
+    margin-top: 28px;
+    font-size: 14px;
+    color: var(--color-muted);
+    font-style: italic;
+  }
+}

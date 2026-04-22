@@ -1,0 +1,35 @@
+/* ============================================================
+   final-cta.css — centered closing section with large heading
+   + CTA pair. Reuses .hero-actions and .eyebrow, centered.
+   ============================================================ */
+
+@layer components {
+  .final-cta {
+    padding: 120px 0;
+    text-align: center;
+  }
+
+  .final-cta h2 {
+    font-size: clamp(36px, 4.4vw, 56px);
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin: 0 0 20px;
+    font-weight: 700;
+  }
+
+  .final-cta p {
+    font-size: 18px;
+    color: var(--color-muted);
+    max-width: 560px;
+    margin: 0 auto 36px;
+  }
+
+  .final-cta .hero-actions {
+    justify-content: center;
+  }
+
+  /* Center the eyebrow's leading rule + text within the column. */
+  .final-cta .eyebrow {
+    justify-content: center;
+  }
+}

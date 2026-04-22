@@ -1,0 +1,51 @@
+/* ============================================================
+   stuck.css — "why firms get stuck" two-column split + the
+   bordered .callout block used across several sections.
+   ============================================================ */
+
+@layer components {
+  .split {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 80px;
+  }
+
+  .stuck-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .stuck-list li {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--color-line);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .stuck-list .num {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--color-accent);
+    min-width: 28px;
+    padding-top: 2px;
+  }
+
+  /* Callout with an accent-colored left rule. Reused elsewhere.
+     Flat corners — a pull-quote, not a card. */
+  .callout {
+    background: var(--color-bg-alt);
+    border-left: 3px solid var(--color-accent);
+    padding: 28px 32px;
+    border-radius: 0;
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--color-ink-2);
+    margin-top: 48px;
+    max-width: 720px;
+  }
+}

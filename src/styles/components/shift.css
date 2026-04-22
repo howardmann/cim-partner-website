@@ -1,0 +1,64 @@
+/* ============================================================
+   shift.css — 3-column "the market shift" grid of from/to cards
+   + the closing paragraph that follows the grid.
+   ============================================================ */
+
+@layer components {
+  .shift {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--color-line);
+    border-radius: 4px;
+    overflow: hidden;
+    background: #ffffff;
+  }
+
+  .shift-cell {
+    padding: 32px 28px;
+    border-right: 1px solid var(--color-line);
+  }
+
+  .shift-cell:last-child {
+    border-right: 0;
+  }
+
+  /* "RCx → MBCx" label above each card. */
+  .shift-from {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--color-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 12px;
+  }
+
+  .shift-from .arrow-right {
+    color: var(--color-accent);
+    margin: 0 6px;
+  }
+
+  .shift-title {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+
+  .shift-desc {
+    font-size: 14px;
+    color: var(--color-muted);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .closer {
+    margin: 40px 0 0;
+    font-size: 17px;
+    color: var(--color-ink-2);
+    /* Narrower than the original 820 so line length stays inside the
+       ~75-char readability ceiling at 1280px. */
+    max-width: 680px;
+    line-height: 1.6;
+  }
+}

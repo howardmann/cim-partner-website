@@ -1,0 +1,51 @@
+/* ============================================================
+   base.css — reset + body defaults + shared primitives
+   (.container, .mono) that belong everywhere in the page.
+   ============================================================ */
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: #ffffff;
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+    font-size: 16px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+@layer components {
+  /* Page-width wrapper used in every section.
+     NOTE: named .wrap (not .container) to avoid Tailwind v4's
+     built-in responsive .container utility overriding us. */
+  .wrap {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* Monospace helper for stat numbers, labels, etc. */
+  .mono {
+    font-family: var(--font-mono);
+  }
+}

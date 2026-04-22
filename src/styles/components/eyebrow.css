@@ -1,0 +1,27 @@
+/* ============================================================
+   eyebrow.css — monospace accent label with a short leading rule.
+   Used to prefix every section heading.
+   ============================================================ */
+
+@layer components {
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    /* Accent is reserved for the leading rule; text sits muted so a page
+       full of eyebrows doesn't feel stamped in green. */
+    color: var(--color-muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 22px;
+    height: 2px;
+    background: var(--color-accent);
+  }
+}

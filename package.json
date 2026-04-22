@@ -1,0 +1,15 @@
+{
+  "name": "peak-landing",
+  "version": "1.0.0",
+  "description": "PEAK partner landing page — refactored into a maintainable Tailwind + component-CSS structure. Original index.html preserved at repo root as the gold-standard reference.",
+  "private": true,
+  "scripts": {
+    "dev": "tailwindcss -i ./src/styles/main.css -o ./src/styles.css --watch",
+    "build": "tailwindcss -i ./src/styles/main.css -o ./src/styles.css --minify",
+    "serve": "python3 -m http.server 4000 --directory src"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

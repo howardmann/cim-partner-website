@@ -1,0 +1,70 @@
+/* ============================================================
+   nav.css — sticky top navigation with CIM logo + PEAK mark.
+   Footer brand reuses .brand but recolors via footer.css.
+   ============================================================ */
+
+@layer components {
+  .nav {
+    border-bottom: 1px solid var(--color-line);
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+
+  .nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    font-size: 15px;
+    color: var(--color-ink);
+    /* Vertical padding gives a ≥42px tap target on mobile without
+       changing the rendered brand mark size. */
+    padding: 8px 0;
+  }
+
+  /* Works for both inline <svg> and <img src="..."> */
+  .brand svg,
+  .brand img {
+    height: 26px;
+    width: auto;
+    display: block;
+  }
+
+  /* "PEAK" tag after the CIM logo — monospace pill. */
+  .brand .product {
+    padding-left: 14px;
+    border-left: 1px solid var(--color-line-strong);
+    color: var(--color-muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    font-size: 14px;
+    color: var(--color-ink-2);
+  }
+
+  .nav-links a:hover {
+    color: var(--color-accent);
+  }
+
+  .nav-cta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}

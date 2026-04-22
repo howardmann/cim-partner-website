@@ -1,0 +1,50 @@
+/* ============================================================
+   buttons.css — .btn primary, .btn.ghost outline, .btn.sm
+   compact, with animated arrow child.
+   ============================================================ */
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: var(--radius);
+    border: 1px solid var(--color-ink);
+    background: var(--color-ink);
+    color: #ffffff;
+    transition: all 0.15s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .btn:hover {
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+
+  .btn.ghost {
+    background: transparent;
+    color: var(--color-ink);
+  }
+
+  .btn.ghost:hover {
+    background: var(--color-ink);
+    color: #ffffff;
+  }
+
+  .btn.sm {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+
+  .btn .arrow {
+    transition: transform 0.15s ease;
+  }
+
+  .btn:hover .arrow {
+    transform: translateX(3px);
+  }
+}

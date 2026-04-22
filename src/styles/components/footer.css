@@ -1,0 +1,81 @@
+/* ============================================================
+   footer.css — dark site footer. Reuses .brand from nav.css but
+   swaps its colors for the dark context via .site-footer scope.
+   ============================================================ */
+
+@layer components {
+  .site-footer {
+    background: var(--color-ink);
+    color: #a8a59d;
+    padding: 64px 0 40px;
+  }
+
+  /* Brand block appears on a dark bg → flip colors. */
+  .site-footer .brand {
+    color: #ffffff;
+  }
+
+  .site-footer .brand .product {
+    color: #8d8b84;
+    border-left-color: #2b2b2b;
+  }
+
+  .foot-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 56px;
+    margin-bottom: 56px;
+  }
+
+  .foot-col h3 {
+    color: #ffffff;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin: 0 0 16px;
+    font-weight: 600;
+  }
+
+  .foot-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .foot-col li {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+
+  /* Block link with padding gives a 33-36px tap target on mobile
+     (audit flagged 17px previously). */
+  .foot-col li a {
+    display: inline-block;
+    padding: 8px 0;
+  }
+
+  .foot-col a:hover {
+    color: #ffffff;
+  }
+
+  .foot-brand {
+    color: #ffffff;
+  }
+
+  .foot-brand p {
+    margin: 16px 0 0;
+    font-size: 14px;
+    color: #8d8b84;
+    max-width: 300px;
+    line-height: 1.55;
+  }
+
+  .foot-bottom {
+    border-top: 1px solid #1f1f1f;
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #6d6b64;
+  }
+}

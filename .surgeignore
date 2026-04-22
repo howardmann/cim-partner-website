@@ -1,0 +1,12 @@
+copy.md
+index-v2.html
+.claude/
+.claude
+.DS_Store
+node_modules/
+package.json
+package-lock.json
+.gitignore
+README.md
+src/styles/
+src/styles/**
