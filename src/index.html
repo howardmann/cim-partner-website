@@ -159,6 +159,70 @@
   </section>
 
   <!-- ============================================================
+       LOGOS + QUOTE — early social proof immediately after the
+       shift narrative. Answers "who's on the other side?" before
+       the reader has to wonder. Dark quote card carries the Aero
+       award lanyard; reads as FOMO for any firm still stuck.
+       Styles: styles/components/logos-stats.css
+       ============================================================ -->
+  <section class="block">
+    <div class="wrap">
+      <!-- Mini crossing: "completed" state.
+           Solid accent-green diagonal + four trailing dots —
+           the line was crossed, and kept going. -->
+      <span class="cx-mini" aria-hidden="true">
+        <svg width="140" height="32" viewBox="0 0 140 32">
+          <line x1="4" y1="26" x2="52" y2="6"
+                stroke="#0f6b4d" stroke-width="3.5" stroke-linecap="square" />
+          <circle cx="70"  cy="6" r="3.5" fill="#0f6b4d" />
+          <circle cx="88"  cy="6" r="3.5" fill="#0f6b4d" />
+          <circle cx="106" cy="6" r="3.5" fill="#0f6b4d" />
+          <circle cx="124" cy="6" r="3.5" fill="#0f6b4d" />
+        </svg>
+      </span>
+      <div class="eyebrow">Partners delivering PEAK today</div>
+      <h2 class="section-h mb-12">The firms already on the other side of the line.</h2>
+
+      <div class="logos">
+        <div class="logo-cell">Aero Performance Group<small>United States</small></div>
+        <div class="logo-cell">Smart Managed Solutions<small>United Kingdom</small></div>
+        <div class="logo-cell">Hoffman Building Technologies<small>United States</small></div>
+        <div class="logo-cell">CSR Sustain<small>United Kingdom</small></div>
+      </div>
+
+      <div class="quote">
+        <!-- Award lanyard pinned to the top-right of the testimonial,
+             calling out Aero's standing in Illinois. Visual grammar:
+             two thin straps converge at a clip, badge hangs below. -->
+        <span class="lanyard" aria-label="Aero Performance Group — #1 market leader in Illinois, powered by PEAK">
+          <svg class="lanyard-straps" viewBox="0 0 120 56" aria-hidden="true">
+            <path d="M12 54 L60 6 L108 54"
+                  fill="none"
+                  stroke="#b8b5ac"
+                  stroke-width="1.5" />
+            <circle cx="60" cy="6" r="3" fill="#0f6b4d" />
+          </svg>
+          <span class="lanyard-badge">
+            <span class="lanyard-rank">#1</span>
+            <span class="lanyard-lines">
+              <span class="lanyard-kicker">Market leader</span>
+              <span class="lanyard-body">Illinois · RCx + MBCx</span>
+            </span>
+          </span>
+          <span class="lanyard-foot">Runs on PEAK</span>
+        </span>
+        "PEAK has helped us increase productivity and significantly expand the number of projects
+        the team can actively work on. We have been very impressed with the platform's AI-powered
+        monitoring, and the advanced visualization capabilities have enhanced our client
+        engagement, helping to improve our retention rates. We are proud of our award-winning
+        track record in delivering energy savings, and CIM has quickly become a key partner for
+        our ambitious growth plans."
+        <div class="attr">— Nick Muscolino, Vice President, Aero Performance Group</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        STUCK — two-column split (copy + numbered list) + callout.
        Styles: styles/components/stuck.css
        ============================================================ -->
@@ -572,67 +636,6 @@
           <strong>They become the expertise your clients renew for.</strong>
         </p>
       </aside>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       LOGOS + QUOTE — partners delivering PEAK today.
-       Styles: styles/components/logos-stats.css
-       ============================================================ -->
-  <section class="block">
-    <div class="wrap">
-      <!-- Mini crossing: "completed" state.
-           Solid accent-green diagonal + four trailing dots —
-           the line was crossed, and kept going. -->
-      <span class="cx-mini" aria-hidden="true">
-        <svg width="140" height="32" viewBox="0 0 140 32">
-          <line x1="4" y1="26" x2="52" y2="6"
-                stroke="#0f6b4d" stroke-width="3.5" stroke-linecap="square" />
-          <circle cx="70"  cy="6" r="3.5" fill="#0f6b4d" />
-          <circle cx="88"  cy="6" r="3.5" fill="#0f6b4d" />
-          <circle cx="106" cy="6" r="3.5" fill="#0f6b4d" />
-          <circle cx="124" cy="6" r="3.5" fill="#0f6b4d" />
-        </svg>
-      </span>
-      <div class="eyebrow">Partners delivering PEAK today</div>
-      <h2 class="section-h mb-12">The firms already on the other side of the line.</h2>
-
-      <div class="logos">
-        <div class="logo-cell">Aero Performance Group<small>United States</small></div>
-        <div class="logo-cell">Smart Managed Solutions<small>United Kingdom</small></div>
-        <div class="logo-cell">Hoffman Building Technologies<small>United States</small></div>
-        <div class="logo-cell">CSR Sustain<small>United Kingdom</small></div>
-      </div>
-
-      <div class="quote">
-        <!-- Award lanyard pinned to the top-right of the testimonial,
-             calling out Aero's standing in Illinois. Visual grammar:
-             two thin straps converge at a clip, badge hangs below. -->
-        <span class="lanyard" aria-label="Aero Performance Group — #1 market leader in Illinois, powered by PEAK">
-          <svg class="lanyard-straps" viewBox="0 0 120 56" aria-hidden="true">
-            <path d="M12 54 L60 6 L108 54"
-                  fill="none"
-                  stroke="#b8b5ac"
-                  stroke-width="1.5" />
-            <circle cx="60" cy="6" r="3" fill="#0f6b4d" />
-          </svg>
-          <span class="lanyard-badge">
-            <span class="lanyard-rank">#1</span>
-            <span class="lanyard-lines">
-              <span class="lanyard-kicker">Market leader</span>
-              <span class="lanyard-body">Illinois · RCx + MBCx</span>
-            </span>
-          </span>
-          <span class="lanyard-foot">Runs on PEAK</span>
-        </span>
-        "PEAK has helped us increase productivity and significantly expand the number of projects
-        the team can actively work on. We have been very impressed with the platform's AI-powered
-        monitoring, and the advanced visualization capabilities have enhanced our client
-        engagement, helping to improve our retention rates. We are proud of our award-winning
-        track record in delivering energy savings, and CIM has quickly become a key partner for
-        our ambitious growth plans."
-        <div class="attr">— Nick Muscolino, Vice President, Aero Performance Group</div>
-      </div>
     </div>
   </section>
 
