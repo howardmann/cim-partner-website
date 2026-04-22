@@ -27,8 +27,8 @@
 
   .hero-grid {
     display: grid;
-    grid-template-columns: 1.25fr 1fr;
-    gap: 80px;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 64px;
     align-items: start;
     position: relative;
   }
@@ -135,16 +135,23 @@
     flex-wrap: wrap;
   }
 
-  /* Right-column visual: a square canvas that hosts the floating
-     product-snapshot cards. Hidden below 980px (see responsive). */
+  /* Right-column visual: supporting canvas that hosts the floating
+     product-snapshot cards. Sized and bottom-aligned so it sits
+     above the fold but visually secondary to the headline copy —
+     right-shifted to the column's end so whitespace carries the
+     eye back to the LHS. Hidden below 980px (see responsive). */
   .hero-visual {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 5;
+    max-width: 420px;
+    width: 100%;
+    margin-left: auto;
+    margin-top: 48px; /* aligns top edge with headline baseline, clearing the eyebrow */
     background: var(--color-bg-alt);
     border: 1px solid var(--color-line);
     border-radius: 8px;
     position: relative;
     overflow: hidden;
-    padding: 24px;
+    padding: 20px;
   }
 
   .hero-card {

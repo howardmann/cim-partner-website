@@ -1,0 +1,270 @@
+/* ============================================================
+   assurance.css — "narrowing the assurance gap" visual pair:
+   (1) a flat editorial building SVG with verification check
+       badges representing the 1,000+ annual hour ceiling, and
+   (2) an animated Chart.js waterfall that falls into place on
+       scroll, showing how AFDD and existing PPM hours close the
+       gap to a small residual of corrective-only work.
+   ============================================================ */
+
+@layer components {
+  /* Outer wrapper: stacks the two visual rows vertically with a
+     generous rhythm that matches the section's closer paragraphs. */
+  .assurance {
+    margin: 56px 0 40px;
+    display: grid;
+    gap: 56px;
+  }
+
+  /* ---------- Row 1: building + copy ------------------------- */
+  .ab {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+
+  .ab-copy .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .ab-h {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.018em;
+    line-height: 1.15;
+    margin: 0 0 14px;
+    color: var(--color-ink);
+  }
+
+  .ab-copy p {
+    font-size: 15.5px;
+    color: var(--color-muted);
+    line-height: 1.65;
+    margin: 0;
+    max-width: 50ch;
+  }
+
+  /* Building illustration frame: centers the SVG. The H3 above
+     carries the "1,000+ hours" claim, so the illustration stays
+     unannotated — the six check badges are the visual story. */
+  .ab-illus {
+    display: flex;
+    justify-content: center;
+    padding: 24px 16px 8px;
+  }
+
+  .ab-illus img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    display: block;
+  }
+
+  /* ---------- Row 2: waterfall chart ------------------------- */
+  .aw {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .aw-head {
+    max-width: 780px;
+  }
+
+  .aw-head .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .aw-head p {
+    font-size: 15.5px;
+    color: var(--color-muted);
+    line-height: 1.65;
+    margin: 8px 0 0;
+    max-width: 68ch;
+  }
+
+  /* Chart shell: sits on the alt-section background, framed by
+     a thin rule that matches the page's line tokens. Fixed
+     aspect so the canvas has a predictable render area for
+     Chart.js regardless of content width. */
+  .aw-chart-wrap {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid var(--color-line);
+    border-radius: 2px;
+    padding: 28px 24px 20px;
+    margin-top: 8px;
+  }
+
+  .aw-chart-wrap canvas {
+    display: block;
+    width: 100% !important;
+    height: 360px !important;
+  }
+
+  /* 52% callout: fades in after the bars land. Absolutely placed
+     in the "gap" space between the required bar and the AFDD
+     reduction bar. Uses the accent color to signal the closing. */
+  .aw-callout {
+    position: absolute;
+    top: 56px;
+    left: 32%;
+    max-width: 220px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-accent-ink);
+    line-height: 1.35;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+  }
+
+  .aw-callout::before {
+    content: "";
+    position: absolute;
+    left: -18px;
+    top: 2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: var(--color-accent);
+  }
+
+  .aw-chart-wrap.is-live .aw-callout {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .aw-note {
+    font-size: 13px;
+    color: var(--color-muted);
+    margin: 14px 0 0;
+    font-style: italic;
+    max-width: 68ch;
+  }
+
+  /* ---------- Radiologist paradox aside ---------------------- */
+  /* Two-pane prediction/reality split + prose pivot. Rendered as
+     a designed editorial module, not a paragraph — it carries
+     the thesis that automation makes experts more valuable, not
+     less. Shares the 1px-divider trick used by .logos / .stats. */
+  .radiologist {
+    margin: 56px 0 24px;
+    padding-top: 44px;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .radiologist .eyebrow {
+    margin-bottom: 20px;
+  }
+
+  .rs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--color-line);
+    border: 1px solid var(--color-line);
+    margin-bottom: 28px;
+  }
+
+  .rs-cell {
+    background: #ffffff;
+    padding: 28px 32px;
+  }
+
+  .rs-cell:last-child {
+    background: #0a0a0a;
+    color: #ffffff;
+  }
+
+  .rs-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 14px;
+  }
+
+  .rs-cell:last-child .rs-label {
+    color: #8d8b84;
+  }
+
+  .rs-claim {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.012em;
+    line-height: 1.35;
+    color: var(--color-ink);
+  }
+
+  .rs-cell:last-child .rs-claim {
+    color: #ffffff;
+  }
+
+  .rs-claim strong {
+    color: var(--color-accent);
+    font-weight: 700;
+  }
+
+  .rs-cell:last-child .rs-claim strong {
+    color: #3fb08a; /* lighter accent on dark */
+  }
+
+  .rs-pivot {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--color-ink);
+    margin: 0;
+    max-width: 72ch;
+  }
+
+  .rs-pivot strong {
+    font-weight: 700;
+    color: var(--color-ink);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 1px;
+  }
+}
+
+/* ---------- Responsive ---------------------------------------- */
+@media (max-width: 860px) {
+  .ab {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ab-illus img {
+    max-width: 220px;
+  }
+
+  .ab-h {
+    font-size: 26px;
+  }
+
+  .aw-chart-wrap canvas {
+    height: 300px !important;
+  }
+
+  .aw-callout {
+    position: static;
+    margin-top: 12px;
+    max-width: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .aw-callout::before {
+    display: none;
+  }
+
+  .rs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rs-claim {
+    font-size: 18px;
+  }
+}

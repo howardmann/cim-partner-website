@@ -23,19 +23,41 @@
     border-right: 0;
   }
 
-  /* "RCx → MBCx" label above each card. */
+  /* "FROM → TO" label above each card. Echoes the toolkit/platform
+     motif in the final CTA: the "from" word is struck through in
+     muted tone, the "to" word lands in accent. This is the page's
+     core positioning language, so it sizes up to read before the
+     card title. */
   .shift-from {
-    font-size: 12px;
+    font-family: var(--font-mono);
+    font-size: 15px;
     font-weight: 500;
-    color: var(--color-muted);
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    margin-bottom: 12px;
+    letter-spacing: 0.14em;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .shift-from .from {
+    color: var(--color-muted);
+    text-decoration: line-through;
+    text-decoration-color: rgba(90, 90, 88, 0.55);
+    text-decoration-thickness: 1.5px;
   }
 
   .shift-from .arrow-right {
     color: var(--color-accent);
-    margin: 0 6px;
+    font-family: var(--font-sans);
+    font-size: 18px;
+    letter-spacing: 0;
+  }
+
+  .shift-from .to {
+    color: var(--color-accent);
+    font-weight: 600;
   }
 
   .shift-title {

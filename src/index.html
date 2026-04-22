@@ -14,6 +14,10 @@
 
   <!-- Built Tailwind + components CSS. Run `npm run build` to regenerate. -->
   <link rel="stylesheet" href="./styles.css" />
+
+  <!-- Chart.js — deferred; used only for the assurance-gap waterfall,
+       which is initialized on scroll via IntersectionObserver. -->
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
 </head>
 <body>
 
@@ -110,7 +114,11 @@
 
       <div class="shift">
         <div class="shift-cell">
-          <div class="shift-from">RCx <span class="arrow-right">→</span> MBCx</div>
+          <div class="shift-from">
+            <span class="from">RCx</span>
+            <span class="arrow-right">→</span>
+            <span class="to">MBCx</span>
+          </div>
           <h3 class="shift-title">Point-in-time to continuous</h3>
           <p class="shift-desc">
             Commissioning is becoming continuous, monitoring-based commissioning on multi-year
@@ -118,7 +126,11 @@
           </p>
         </div>
         <div class="shift-cell">
-          <div class="shift-from">Scheduled <span class="arrow-right">→</span> Continuous</div>
+          <div class="shift-from">
+            <span class="from">Scheduled</span>
+            <span class="arrow-right">→</span>
+            <span class="to">Continuous</span>
+          </div>
           <h3 class="shift-title">Verification you can't do manually</h3>
           <p class="shift-desc">
             Calendar-driven checks are becoming continuous, automated verification, closing the
@@ -126,7 +138,11 @@
           </p>
         </div>
         <div class="shift-cell">
-          <div class="shift-from">Reports <span class="arrow-right">→</span> Live</div>
+          <div class="shift-from">
+            <span class="from">Reports</span>
+            <span class="arrow-right">→</span>
+            <span class="to">Live</span>
+          </div>
           <h3 class="shift-title">Live accountability</h3>
           <p class="shift-desc">
             Quarterly PDFs are becoming dashboards your clients check daily.
@@ -152,7 +168,7 @@
         <div>
           <!-- Mini crossing: "attempted" state.
                Two dashed diagonal segments that don't connect —
-               the line was started but never finished. Muted grey
+               the line was started but never finished. Muted gray
                so it doesn't compete with the accent-green marks. -->
           <span class="cx-mini" aria-hidden="true">
             <svg width="112" height="32" viewBox="0 0 112 32">
@@ -179,7 +195,7 @@
             </li>
             <li>
               <span class="num">02</span>
-              <span>A tagging and modelling stack that doesn't need hand-assembly on every site.</span>
+              <span>A tagging and modeling stack that doesn't need hand-assembly on every site.</span>
             </li>
             <li>
               <span class="num">03</span>
@@ -301,7 +317,7 @@
       <!-- Dark inverted intro panel -->
       <div class="peak-intro">
         <div>
-          <h3>One platform. Two divisions of labour.</h3>
+          <h3>One platform. Two divisions of labor.</h3>
           <p>
             We built PEAK for our own engineers running global portfolios across hundreds of
             millions of square feet, then opened it to partners as a fully-managed service. You
@@ -419,13 +435,14 @@
           <ul class="price-incl">
             <li>Full feature set</li>
             <li>24/5 local technical support (engineers not call-center)</li>
-            <li>Fully-managed onboarding &amp; tagging</li>
             <li>Hosting &amp; platform operations</li>
             <li>Dedicated partner success &amp; GTM enablement</li>
+            <li>Fully-managed onboarding &amp; tagging<span class="asterisk">*</span></li>
           </ul>
           <div class="price-fine">
-            Partner retains everything above wholesale, plus all services revenue: deployment
-            engineering, MBCx programme delivery, fault triage, client reporting, retainers.
+            <p>Partner retains everything above wholesale, plus all services revenue: deployment
+            engineering, MBCx program delivery, fault triage, client reporting, retainers.</p>
+            <p><span class="asterisk">*</span>Separate labor line, billed at cost. Tech-enabled, so a fraction of what in-house delivery would cost you.</p>
           </div>
         </div>
       </div>
@@ -441,7 +458,7 @@
       <div class="eyebrow">Who we partner with</div>
       <h2 class="section-h">Three firm types. One partnership model.</h2>
       <p class="section-sub">
-        PEAK is deployed exclusively through partners. If you recognise yourself below, we want
+        PEAK is deployed exclusively through partners. If you recognize yourself below, we want
         to talk.
       </p>
 
@@ -468,27 +485,93 @@
 
       <p class="closer">
         A mid-rise office portfolio requires 1,000+ verification hours per building per year
-        under recognised maintenance standards. Most dispatch teams can physically deliver less
+        under recognized maintenance standards. Most dispatch teams can physically deliver less
         than a third of that. The result is a <strong>72% assurance gap</strong> your clients
         are carrying whether they name it or not.
       </p>
+
+      <!-- ========================================================
+           ASSURANCE GAP visual pair. Row 1: building SVG + stat
+           plate for the 1,000+ hour annual ceiling. Row 2: a
+           Chart.js waterfall that falls in on scroll, showing
+           the gap narrowing from required → corrective-only.
+           Styles: styles/components/assurance.css
+           Init: inline script at end of body.
+           ======================================================== -->
+      <div class="assurance">
+        <div class="ab">
+          <div class="ab-copy">
+            <div class="eyebrow">Annual assurance load</div>
+            <h3 class="ab-h">1,000+ verification hours per building, per year.</h3>
+            <p>
+              Under recognized maintenance standards, a 200,000 sqft mid-rise office requires
+              more than a thousand annual verification hours across BMS and mechanical systems.
+              Most dispatch rosters can physically deliver less than a third of it. The rest is
+              carried as an assurance gap — invisible on the schedule, real in the building.
+            </p>
+          </div>
+          <div class="ab-illus">
+            <img src="./assets/building-checks.svg"
+                 alt="High-rise office with verification check marks on every floor" />
+          </div>
+        </div>
+
+        <div class="aw">
+          <div class="aw-head">
+            <div class="eyebrow">Narrowing the assurance gap</div>
+            <h3 class="ab-h">PEAK closes 52% of required checks automatically.</h3>
+            <p>
+              Continuous AFDD runs 24×7 across every point in the portfolio, absorbing the bulk
+              of routine verification your roster was never going to get to. The gap doesn't
+              disappear — it narrows to a residual your team can actually see and work.
+            </p>
+          </div>
+          <div class="aw-chart-wrap" id="assuranceChartWrap">
+            <canvas id="assuranceChart"
+                    aria-label="Waterfall chart: required hours, reduced by AFDD and existing PPM hours, leaving a small remaining corrective-action residual"></canvas>
+            <div class="aw-callout">52% of required checks<br />automated by AFDD</div>
+          </div>
+          <p class="aw-note">
+            Modeled on a 200,000 sqft office under recognized maintenance standards. Shape holds
+            across asset class; magnitudes vary.
+          </p>
+        </div>
+      </div>
+
       <p class="closer">
-        PEAK closes 52% of those required checks automatically, running 24×7 across billions of real-time checks per portfolio per year. No technicians replaced. The hours you were
-        already going to dispatch now land on the other 48%: corrective action, diagnosis, and
-        repair that only humans can do.
+        Billions of real-time checks per portfolio per year, running continuously. No technicians
+        replaced — the ceiling that used to cap a dispatch roster is the floor PEAK starts from.
       </p>
-      <p class="closer">
-        In 2016 the prediction was that AI would replace radiologists within five years. Ten
-        years later their workforce is up 40%, projected to grow another 40% by 2055. The pattern
-        for your technicians is the same. Continuous verification surfaces more faults, which
-        means more corrective dispatches your technicians still need to close. Truck rolls don't
-        disappear. They become part of a recurring assurance contract your competitors still
-        deliver by clipboard.
-      </p>
-      <p class="closer">
-        <em>Modeled for mid-rise office portfolios under recognised maintenance standards; gap
-        varies by asset class.</em>
-      </p>
+      <!-- ========================================================
+           RADIOLOGIST PARADOX. Structured echo of the assurance
+           module: a two-pane Prediction vs Reality split carrying
+           the statistical juxtaposition, then a prose pivot that
+           applies the pattern to the reader's technicians.
+           Styles: styles/components/assurance.css
+           ======================================================== -->
+      <aside class="radiologist">
+        <div class="eyebrow">The radiologist paradox</div>
+        <div class="rs-grid">
+          <div class="rs-cell">
+            <div class="rs-label">2016 · Prediction</div>
+            <div class="rs-claim">"AI will replace radiologists within five years."</div>
+          </div>
+          <div class="rs-cell">
+            <div class="rs-label">2026 · Reality</div>
+            <div class="rs-claim">
+              Radiologist workforce <strong>+40%</strong>. Projected
+              <strong>+40% more</strong> by 2055.
+            </div>
+          </div>
+        </div>
+        <p class="rs-pivot">
+          The pattern for your engineers and technicians is the same. PEAK automates the routine
+          verification a dispatch roster was never going to finish — so the hours you deploy
+          land on diagnosis, corrective action, and the client conversations only humans can have.
+          Your people aren't replaced.
+          <strong>They become the expertise your clients renew for.</strong>
+        </p>
+      </aside>
     </div>
   </section>
 
@@ -615,6 +698,177 @@
       </div>
     </div>
   </footer>
+
+  <!-- ============================================================
+       Assurance waterfall init. Builds the Chart.js floating-bar
+       waterfall on first scroll into the chart area, so the bars
+       "fall into place" in sequence as the reader arrives.
+       ============================================================ -->
+  <script>
+    (function () {
+      var canvas = document.getElementById('assuranceChart');
+      var wrap   = document.getElementById('assuranceChartWrap');
+      if (!canvas || !wrap) return;
+
+      var INK    = '#0a0a0a';
+      var MUTED  = '#5a5a58';
+      var GRAY   = '#cfccc3';
+      var ACCENT = '#0f6b4d';
+
+      // High-level proportional story. No dollar figures — only
+      // the shape of the gap closing. Values roughly track the
+      // source slide so the "52%" callout lines up with the drop
+      // between the first two bars.
+      // Labels: each split on array lines so Chart.js renders a
+      // two-line tick, keeping labels readable without rotation
+      // even on narrow viewports.
+      var bars = [
+        { label: ['Required', 'checks'],   range: [0, 1073],   color: GRAY,   kind: 'total' },
+        { label: ['AFDD',     '24/7'],     range: [510, 1073], color: ACCENT, kind: 'cut'   },
+        { label: ['Mech',     'PPM'],      range: [308, 510],  color: ACCENT, kind: 'cut'   },
+        { label: ['BMS',      'PPM'],      range: [208, 308],  color: ACCENT, kind: 'cut'   },
+        { label: ['Remaining'],            range: [0, 208],    color: GRAY,   kind: 'total' }
+      ];
+
+      // Chart.js plugin: draws short bar-top labels only on the
+      // "before" and "after" totals, and dashed guide lines
+      // between consecutive bar tops so the eye reads the
+      // waterfall. Kept minimal — no per-bar hour counts.
+      var storyPlugin = {
+        id: 'storyOverlay',
+        afterDatasetsDraw: function (chart) {
+          var ctx = chart.ctx;
+          var meta = chart.getDatasetMeta(0);
+          if (!meta || !meta.data || !meta.data.length) return;
+
+          ctx.save();
+
+          // Dashed connectors between successive bar tops.
+          ctx.strokeStyle = '#b8b5ac';
+          ctx.lineWidth = 1;
+          ctx.setLineDash([4, 4]);
+          for (var i = 0; i < meta.data.length - 1; i++) {
+            var cur  = meta.data[i];
+            var next = meta.data[i + 1];
+            if (!cur || !next) continue;
+            var curTopY  = Math.min(cur.y, cur.base);
+            var nextTopY = Math.min(next.y, next.base);
+            ctx.beginPath();
+            ctx.moveTo(cur.x + cur.width / 2, curTopY);
+            ctx.lineTo(next.x - next.width / 2, curTopY);
+            ctx.lineTo(next.x - next.width / 2, nextTopY);
+            ctx.stroke();
+          }
+          ctx.setLineDash([]);
+
+          // End labels only: "~1,000 hrs" and "~200 hrs".
+          ctx.font = '600 12px Inter, sans-serif';
+          ctx.textAlign = 'center';
+          ctx.fillStyle = INK;
+
+          var first = meta.data[0];
+          var last  = meta.data[meta.data.length - 1];
+          if (first) {
+            ctx.fillText('~1,000 hrs', first.x, Math.min(first.y, first.base) - 10);
+          }
+          if (last) {
+            ctx.fillText('~200 hrs', last.x, Math.min(last.y, last.base) - 10);
+          }
+
+          ctx.restore();
+        }
+      };
+
+      function buildChart() {
+        if (typeof Chart === 'undefined') return false;
+
+        new Chart(canvas, {
+          type: 'bar',
+          data: {
+            labels: bars.map(function (b) { return b.label; }),
+            datasets: [{
+              data: bars.map(function (b) { return b.range; }),
+              backgroundColor: bars.map(function (b) { return b.color; }),
+              borderSkipped: false,
+              borderRadius: 2,
+              barPercentage: 0.72,
+              categoryPercentage: 0.9
+            }]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: { padding: { top: 28, right: 16, bottom: 4, left: 8 } },
+            plugins: {
+              legend:  { display: false },
+              tooltip: { enabled: false }
+            },
+            scales: {
+              x: {
+                grid:   { display: false },
+                border: { color: INK },
+                ticks:  {
+                  color: MUTED,
+                  font: { family: 'Inter', size: 11 },
+                  autoSkip: false,
+                  maxRotation: 0,
+                  minRotation: 0,
+                  padding: 6
+                }
+              },
+              y: {
+                display: false,
+                min: 0,
+                max: 1200
+              }
+            },
+            animation: {
+              duration: 900,
+              easing:   'easeOutCubic',
+              delay: function (ctx) {
+                if (ctx.type === 'data' && ctx.mode === 'default') {
+                  return ctx.dataIndex * 260;
+                }
+                return 0;
+              },
+              onComplete: function () { wrap.classList.add('is-live'); }
+            }
+          },
+          plugins: [storyPlugin]
+        });
+
+        return true;
+      }
+
+      var launched = false;
+      function launch() {
+        if (launched) return;
+        if (buildChart()) { launched = true; }
+      }
+
+      // If Chart.js hasn't loaded yet (defer + IO racing), retry.
+      function onIntersect(entries, observer) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          if (typeof Chart === 'undefined') {
+            // Chart.js still loading — wait for window.load then retry.
+            window.addEventListener('load', launch, { once: true });
+          } else {
+            launch();
+          }
+          observer.disconnect();
+        });
+      }
+
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(onIntersect, { threshold: 0.3 });
+        io.observe(wrap);
+      } else {
+        // Fallback: just build on DOM ready.
+        window.addEventListener('load', launch, { once: true });
+      }
+    })();
+  </script>
 
 </body>
 </html>

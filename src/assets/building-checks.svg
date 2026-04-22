@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 400" role="img" aria-labelledby="bcTitle bcDesc">
+  <title id="bcTitle">High-rise office requiring 1,000+ verification hours per year</title>
+  <desc id="bcDesc">Editorial illustration of a mid-rise office tower with six verification check marks, representing the annual assurance load.</desc>
+
+  <defs>
+    <!-- Window grid. Pattern origin aligned with the filled rect so every
+         window sits cleanly on the grid. 5 cols x 11 rows = 55 windows. -->
+    <pattern id="bc-windows" x="50" y="44" width="36" height="28" patternUnits="userSpaceOnUse">
+      <rect x="6" y="5" width="24" height="18" fill="#eaf1ee" stroke="#cfccc3" stroke-width="0.9" />
+    </pattern>
+  </defs>
+
+  <!-- Ground shadow -->
+  <ellipse cx="140" cy="389" rx="124" ry="5" fill="#0a0a0a" opacity="0.07" />
+
+  <!-- Rooftop plant: penthouse + two water tanks -->
+  <rect x="108" y="22" width="64" height="12" fill="#f6f6f4" stroke="#0a0a0a" stroke-width="1.4" />
+  <rect x="122" y="10" width="10" height="14" rx="1" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.2" />
+  <rect x="148" y="10" width="10" height="14" rx="1" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.2" />
+  <ellipse cx="127" cy="10" rx="5" ry="1.6" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.2" />
+  <ellipse cx="153" cy="10" rx="5" ry="1.6" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.2" />
+
+  <!-- Main tower body -->
+  <rect x="40" y="34" width="200" height="330" fill="#ffffff" stroke="#0a0a0a" stroke-width="1.6" />
+
+  <!-- Window grid -->
+  <rect x="50" y="44" width="180" height="308" fill="url(#bc-windows)" />
+
+  <!-- Base plinth + entrance -->
+  <rect x="22" y="364" width="236" height="22" fill="#f6f6f4" stroke="#0a0a0a" stroke-width="1.5" />
+  <rect x="126" y="372" width="28" height="14" fill="#0a0a0a" />
+
+  <!-- Verification check badges. Each badge: rounded square + white check glyph.
+       Positioned to spread vertically/horizontally across the facade so the
+       reader reads the building as "checked across every floor". -->
+  <g>
+    <g transform="translate(76 88)">
+      <rect width="26" height="26" rx="4" fill="#0f6b4d" />
+      <path d="M6 13.5 l5 5 l9 -11" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <g transform="translate(172 76)">
+      <rect width="26" height="26" rx="4" fill="#0f6b4d" />
+      <path d="M6 13.5 l5 5 l9 -11" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <g transform="translate(122 160)">
+      <rect width="26" height="26" rx="4" fill="#0f6b4d" />
+      <path d="M6 13.5 l5 5 l9 -11" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <g transform="translate(204 188)">
+      <rect width="26" height="26" rx="4" fill="#0f6b4d" />
+      <path d="M6 13.5 l5 5 l9 -11" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <g transform="translate(60 236)">
+      <rect width="26" height="26" rx="4" fill="#0f6b4d" />
+      <path d="M6 13.5 l5 5 l9 -11" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+    <g transform="translate(160 296)">
+      <rect width="26" height="26" rx="4" fill="#0f6b4d" />
+      <path d="M6 13.5 l5 5 l9 -11" stroke="#ffffff" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+    </g>
+  </g>
+</svg>
