@@ -26,9 +26,10 @@
 
 **Hero visual cards:**
 - Auto-commissioning — BMS connected · 1,284 points tagged
-- Issue — priority high — AHU-3 out of hours operation
-- Analyst agent query — "kWh savings QTD per site?"
-- Compliance agent — Triaged · Assigned · Chasing close-out
+- Alert — priority high — AHU-3 out of hours operation
+- Action — overdue — @andrew whats the repair status
+- AI Analyst Agent — "what's getting worse across the portfolio?"
+- AI Compliance agent — Triaged · Assigned · Chasing close-out
 
 
 ---

@@ -162,11 +162,13 @@
     font-size: 15px;
   }
 
-  /* Each card's position within the hero-visual canvas. */
-  .hero-card.c1 { top: 32px;    left: 28px;  width: 58%; }
-  .hero-card.c2 { top: 128px;   right: 24px; width: 52%; }
-  .hero-card.c3 { bottom: 96px; left: 40px;  width: 64%; }
-  .hero-card.c4 { bottom: 28px; right: 28px; width: 50%; }
+  /* Each card's position within the hero-visual canvas.
+     Zig-zag layout across five staggered rows. */
+  .hero-card.c1 { top: 4%;  left: 4%;   width: 56%; }
+  .hero-card.c2 { top: 22%; right: 4%;  width: 54%; }
+  .hero-card.c3 { top: 42%; left: 7%;   width: 60%; }
+  .hero-card.c4 { top: 61%; right: 5%;  width: 58%; }
+  .hero-card.c5 { bottom: 4%; left: 6%; width: 58%; }
 
   /* Status dots. Default = accent green, plus amber/red variants. */
   .dot {
