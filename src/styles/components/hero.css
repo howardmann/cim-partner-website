@@ -102,8 +102,8 @@
   .ai-mark::after {
     bottom: -5px;
     height: 7px;
-    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 7' preserveAspectRatio='none'><path d='M2 4.2 C 45 3.2 100 4.7 155 3.8 C 180 3.4 193 4.1 198 3.7' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'/></svg>");
-    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 7' preserveAspectRatio='none'><path d='M2 4.2 C 45 3.2 100 4.7 155 3.8 C 180 3.4 193 4.1 198 3.7' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'/></svg>");
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 7' preserveAspectRatio='none'><path d='M2 4 C 50 3.85 100 4.1 150 3.9 C 175 3.85 190 4 198 3.95' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'/></svg>");
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 7' preserveAspectRatio='none'><path d='M2 4 C 50 3.85 100 4.1 150 3.9 C 175 3.85 190 4 198 3.95' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'/></svg>");
     animation-name: ai-mark-draw;
     animation-duration: 700ms;
     animation-delay: 3200ms;
