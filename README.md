@@ -106,5 +106,9 @@ Changing a brand color — e.g. shifting the accent green — is a one-line edit
 
 ## Deploy
 
-The repo deploys to surge.sh. `.surgeignore` excludes dev-only files (`node_modules/`, `package.json`, source CSS). The root `index.html` remains canonical; `src/index.html` ships alongside it for parallel review.
+```bash
+npm run deploy
+```
+
+Runs `npm run build` (minified Tailwind output) then publishes `./src` to `cim-partner.surge.sh`. `src/.surgeignore` excludes the Tailwind source CSS under `src/styles/`.
 # cim-partner-website

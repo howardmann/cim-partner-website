@@ -69,6 +69,10 @@
     display: inline-block;
   }
 
+  /* Wobbly SVG is applied as a mask so the accent color still comes
+     from var(--color-accent) — keeps theme control in one place. The
+     reveal uses clip-path instead of scaleX so the scribble doesn't
+     squish horizontally while drawing in. */
   .deliver-mark::after,
   .ai-mark::after {
     content: "";
@@ -76,37 +80,44 @@
     left: 0;
     right: 0;
     background: var(--color-accent);
-    transform: scaleX(0);
-    transform-origin: left center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    clip-path: inset(0 100% 0 0);
     animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
     animation-fill-mode: forwards;
   }
 
   .deliver-mark::after {
-    bottom: -4px;
-    height: 3px;
+    bottom: -8px;
+    height: 10px;
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 10' preserveAspectRatio='none'><path d='M3 6 C 80 4.5 160 6.3 240 5.4 C 310 4.6 365 5.8 397 5' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round'/></svg>");
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 10' preserveAspectRatio='none'><path d='M3 6 C 80 4.5 160 6.3 240 5.4 C 310 4.6 365 5.8 397 5' fill='none' stroke='black' stroke-width='3.5' stroke-linecap='round'/></svg>");
     animation-name: ai-mark-draw;
     animation-duration: 900ms;
     animation-delay: 1500ms;
   }
 
   .ai-mark::after {
-    bottom: -2px;
-    height: 2px;
+    bottom: -5px;
+    height: 7px;
+    -webkit-mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 7' preserveAspectRatio='none'><path d='M2 4.2 C 45 3.2 100 4.7 155 3.8 C 180 3.4 193 4.1 198 3.7' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'/></svg>");
+    mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 7' preserveAspectRatio='none'><path d='M2 4.2 C 45 3.2 100 4.7 155 3.8 C 180 3.4 193 4.1 198 3.7' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'/></svg>");
     animation-name: ai-mark-draw;
     animation-duration: 700ms;
     animation-delay: 3200ms;
   }
 
   @keyframes ai-mark-draw {
-    to { transform: scaleX(1); }
+    to { clip-path: inset(0 0 0 0); }
   }
 
   @media (prefers-reduced-motion: reduce) {
     .deliver-mark::after,
     .ai-mark::after {
       animation: none;
-      transform: scaleX(1);
+      clip-path: inset(0 0 0 0);
     }
   }
 

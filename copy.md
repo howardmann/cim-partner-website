@@ -20,7 +20,9 @@
 
 **Lead:** The AI team your firm doesn't need to build.
 
-**Sub:** PEAK is the fully-managed FDD, analytics, and compliance platform RCx and MBCx firms use when their headcount can't keep up. Your engineers walk into live deployments instead of integration projects. Your clients use AI to query their buildings through ChatGPT, Claude, or Microsoft Copilot. Your AI Compliance Agent triages and closes out faults while your team sleeps.
+**Sub:** PEAK is the fully-managed FDD, analytics, and compliance platform RCx and MBCx firms use when their headcount can't keep up. Your engineers walk into live deployments instead of integration projects. 
+
+Your Analyst Agent tells clients what's wrong, who's on it and how long its taking. Your Compliance Agent triages and closes out faults while your team sleeps.
 
 **Buttons:** Apply to the partner program → · Book a partner fit call
 

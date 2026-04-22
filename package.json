@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "tailwindcss -i ./src/styles/main.css -o ./src/styles.css --watch",
     "build": "tailwindcss -i ./src/styles/main.css -o ./src/styles.css --minify",
-    "serve": "python3 -m http.server 4000 --directory src"
+    "serve": "python3 -m http.server 4000 --directory src",
+    "deploy": "npm run build && surge ./src cim-partner.surge.sh"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.0",
