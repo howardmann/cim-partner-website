@@ -41,6 +41,7 @@
 
   /* --- Dark testimonial quote panel — flat editorial pull-quote. --- */
   .quote {
+    position: relative;
     padding: 48px 56px;
     background: var(--color-ink);
     color: #ffffff;
@@ -48,6 +49,7 @@
     font-size: 22px;
     line-height: 1.4;
     letter-spacing: -0.01em;
+    margin-top: 96px; /* leaves room for the lanyard to hang above the top edge */
     margin-bottom: 64px;
   }
 
@@ -56,6 +58,84 @@
     font-size: 13px;
     color: #8d8b84;
     letter-spacing: 0.02em;
+  }
+
+  /* --- Award lanyard pinned to the top-right of the testimonial.
+         Two straps rise above the quote card and converge on a
+         small accent clip; a white card hangs below carrying the
+         #1 / market leader / "runs on PEAK" stack. --- */
+  .lanyard {
+    position: absolute;
+    top: -82px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none; /* purely decorative */
+  }
+
+  .lanyard-straps {
+    width: 100px;
+    height: 44px;
+    display: block;
+    margin-bottom: -3px; /* strap endpoints tuck into the badge top */
+  }
+
+  .lanyard-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    color: var(--color-ink);
+    padding: 12px 16px 10px;
+    border-radius: 3px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+  }
+
+  .lanyard-rank {
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--color-accent);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    font-feature-settings: "tnum" 1;
+  }
+
+  .lanyard-lines {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+  }
+
+  .lanyard-kicker {
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 2px;
+  }
+
+  .lanyard-body {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    color: var(--color-ink);
+  }
+
+  /* Footer strip inside the badge: "Runs on PEAK" — the connotation
+     that PEAK powers the #1 firm lives here, not in the body. */
+  .lanyard-foot {
+    margin-top: 0;
+    background: var(--color-accent);
+    color: #ffffff;
+    font-family: var(--font-mono);
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 5px 14px 6px;
+    border-radius: 0 0 3px 3px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24);
   }
 
   /* --- Platform stats grid --- */
