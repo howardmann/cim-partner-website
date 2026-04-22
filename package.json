@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.0",
+    "surge": "^0.27.0",
     "tailwindcss": "^4.1.0"
   }
 }
