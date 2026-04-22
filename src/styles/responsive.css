@@ -87,5 +87,16 @@
     .peak-intro {
       padding: 28px;
     }
+
+    /* Ghost "Partner fit call" CTA is redundant with the primary
+       Apply button on narrow phones and causes the brand mark to
+       collide with the nav-cta cluster. */
+    .nav-cta .btn.ghost {
+      display: none;
+    }
+
+    .nav-inner {
+      gap: 12px;
+    }
   }
 }
