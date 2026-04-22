@@ -63,6 +63,7 @@
 @import "./components/logos-stats.css";
 @import "./components/final-cta.css";
 @import "./components/footer.css";
+@import "./components/crossline.css";
 
 /* ------------------------------------------------------------
    Responsive overrides — grouped so every breakpoint

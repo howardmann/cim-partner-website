@@ -47,20 +47,22 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="eyebrow">Partner program · FDD &amp; MBCx</div>
+        <div class="eyebrow">Partner program · Cross the line</div>
         <h1 class="display">
           We've built the <em>future of building performance automation</em>.
           <span class="deliver-mark">Come deliver it</span>.
         </h1>
         <p class="hero-lead">The <span class="ai-mark">AI team</span> your firm doesn't need to build.</p>
         <p class="hero-sub">
-          PEAK is the fully-managed FDD, analytics, and compliance platform RCx and MBCx firms use
-          when their headcount can't keep up. Your engineers walk into live deployments instead of
-          integration projects.
+          Point-in-time audits. Scheduled maintenance. Quarterly reports. Your clients stopped
+          buying them. They want continuous monitoring, verification, and close-out. RCx, MBCx,
+          BMS, or mechanical: the service model just moved under you.
         </p>
         <p class="hero-sub">
-          Your Analyst Agent tells clients what's wrong, who's on it and how long it's taking.
-          Your Compliance Agent triages and closes out faults while your team sleeps.
+          PEAK is the fully-managed Building Performance Automation platform services firms cross
+          the line with. Your engineers walk into live deployments instead of integration
+          projects. Your AI analyst agents tell clients what's wrong, who's on it, how long.
+          Your compliance agents close out faults while your team sleeps.
         </p>
         <div class="hero-actions">
           <a class="btn" href="#apply">Apply to the partner program <span class="arrow">→</span></a>
@@ -134,8 +136,8 @@
 
       <p class="closer">
         Every RCx/MBCx firm, engineering consultancy, and BMS/mechanical contractor has to cross
-        this line. You either <strong>hire a software team</strong> to build it, or
-        <strong>partner with one already on the other side</strong>.
+        this line. You either hire a software team and spend a decade building it, or partner
+        with one already on the other side.
       </p>
     </div>
   </section>
@@ -148,6 +150,20 @@
     <div class="wrap">
       <div class="split">
         <div>
+          <!-- Mini crossing: "attempted" state.
+               Two dashed diagonal segments that don't connect —
+               the line was started but never finished. Muted grey
+               so it doesn't compete with the accent-green marks. -->
+          <span class="cx-mini" aria-hidden="true">
+            <svg width="112" height="32" viewBox="0 0 112 32">
+              <line x1="4"  y1="26" x2="40" y2="6"
+                    stroke="#8a8a86" stroke-width="3.5" stroke-linecap="square"
+                    stroke-dasharray="6 4" />
+              <line x1="58" y1="18" x2="86" y2="4"
+                    stroke="#8a8a86" stroke-width="3" stroke-linecap="square"
+                    stroke-dasharray="6 4" opacity="0.4" />
+            </svg>
+          </span>
           <div class="eyebrow">Why it's hard to cross alone</div>
           <h2 class="section-h">Firms that try to cross alone get stuck.</h2>
           <p class="section-sub">
@@ -177,20 +193,91 @@
               <span class="num">05</span>
               <span>An AI investment budget that keeps compounding while your competitors catch up.</span>
             </li>
+            <li>
+              <span class="num">06</span>
+              <span>A full-time engineering team programming rules, commissioning new points, and monitoring hardware device-node uptime across every site.</span>
+            </li>
+            <li>
+              <span class="num">07</span>
+              <span>A software DevOps team managing hosting, automation checks, and the cloud uptime your clients are paying you for.</span>
+            </li>
           </ol>
         </div>
       </div>
 
-      <p class="closer">
-        <strong>$40M+ invested.</strong> 10+ years of R&amp;D and engineering algorithms.
-        Battle-tested across hundreds of millions of square feet globally and thousands of end
-        users taking action. That's the gap any firm building alone has to close.
-      </p>
+      <!-- The gap any firm building alone has to close, rendered as
+           three engineered stats that match the data-first aesthetic
+           of the rest of the page. -->
+      <div class="stuck-stats">
+        <div class="stat">
+          <div class="big">$40M+</div>
+          <div class="lbl">Invested</div>
+        </div>
+        <div class="stat">
+          <div class="big">10+ years</div>
+          <div class="lbl">R&amp;D + engineering</div>
+        </div>
+        <div class="stat">
+          <div class="big">100M+ ft²</div>
+          <div class="lbl">Battle-tested globally</div>
+        </div>
+      </div>
 
-      <div class="callout">
-        A tagging framework <strong>isn't a platform</strong>. A rules editor <strong>isn't a
-        delivered capability</strong>. Neither is a data layer on its own. Services firms need
-        managed capability their team walks into on day one.
+      <p class="closer">
+        That's the gap any firm building alone has to close.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       HERO CROSSING — campaign payoff, between "stuck" and
+       "platform". Heavy ascending diagonal. Below-left: one
+       muted straggler dot ("you"). Above-right: seven accent
+       dots ("firms already across"). The reader is implicated
+       as the one being left behind.
+       Styles: styles/components/crossline.css
+       ============================================================ -->
+  <section class="cx-hero-crossing" aria-label="Cross the line">
+    <svg class="cx-mark" viewBox="0 0 1000 420" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <filter id="cx-wobble" x="-2%" y="-2%" width="104%" height="104%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="2" seed="7" />
+          <feDisplacementMap in="SourceGraphic" scale="2.5" />
+        </filter>
+      </defs>
+      <!-- Ascending diagonal (/). Starts bottom-left, ends top-right. -->
+      <line class="stroke"
+            x1="40"  y1="380"
+            x2="960" y2="40"
+            stroke="#0f6b4d"
+            stroke-width="9"
+            stroke-linecap="square"
+            filter="url(#cx-wobble)" />
+    </svg>
+    <div class="wrap">
+      <div class="side left">
+        <div class="tag">Build alone</div>
+        <div class="head">Hire a software team. Spend a decade.</div>
+        <div class="sub">$40M · 10 years · still not shipped</div>
+        <div class="marks">
+          <span class="dot"></span>
+          <span class="label">You — today</span>
+        </div>
+      </div>
+      <div class="side right">
+        <div class="tag">Already across</div>
+        <div class="head">Partner with one already built.</div>
+        <div class="sub">Turnkey · week 1 · deployed</div>
+        <div class="marks">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="label">Firms already across</span>
+        </div>
       </div>
     </div>
   </section>
@@ -411,6 +498,19 @@
        ============================================================ -->
   <section class="block">
     <div class="wrap">
+      <!-- Mini crossing: "completed" state.
+           Solid accent-green diagonal + four trailing dots —
+           the line was crossed, and kept going. -->
+      <span class="cx-mini" aria-hidden="true">
+        <svg width="140" height="32" viewBox="0 0 140 32">
+          <line x1="4" y1="26" x2="52" y2="6"
+                stroke="#0f6b4d" stroke-width="3.5" stroke-linecap="square" />
+          <circle cx="70"  cy="6" r="3.5" fill="#0f6b4d" />
+          <circle cx="88"  cy="6" r="3.5" fill="#0f6b4d" />
+          <circle cx="106" cy="6" r="3.5" fill="#0f6b4d" />
+          <circle cx="124" cy="6" r="3.5" fill="#0f6b4d" />
+        </svg>
+      </span>
       <div class="eyebrow">Partners delivering PEAK today</div>
       <h2 class="section-h mb-12">The firms already on the other side of the line.</h2>
 
@@ -441,6 +541,19 @@
     <div class="wrap">
       <div class="eyebrow">Come deliver it</div>
       <h2>Cross the line with a platform, <br />not a toolkit.</h2>
+
+      <!-- Tight echo of the hero crossing: TOOLKIT / PLATFORM
+           split by a short accent-green diagonal. The final
+           callback to the line the reader has already seen twice. -->
+      <div class="cx-cta-crossing" aria-hidden="true">
+        <div class="side left">Toolkit</div>
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <line x1="8" y1="56" x2="56" y2="8"
+                stroke="#0f6b4d" stroke-width="5" stroke-linecap="square" />
+        </svg>
+        <div class="side right">Platform</div>
+      </div>
+
       <p>
         Apply to the partner program, or book a partner fit call to see the deployment model and
         wholesale economics.
