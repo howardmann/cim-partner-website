@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PEAK AI Platform — Built. Running on 100M+ ft².</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV — duplicated from the home page, with section anchors
+       rewired to /#anchor cross-page jumps and an added AI link.
+       ============================================================ -->
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="../" aria-label="CIM PEAK">
+        <img src="../assets/cim-logo.svg" alt="CIM" />
+        <span class="product">PEAK</span>
+      </a>
+      <div class="nav-links">
+        <a href="../#shift">The shift</a>
+        <a href="../#platform">Platform</a>
+        <a href="../#economics">Economics</a>
+        <a href="../#partners">Partners</a>
+        <a href="./" aria-current="page">AI</a>
+      </div>
+      <div class="nav-cta">
+        <a class="btn ghost sm" href="../#fit">Partner fit call</a>
+        <a class="btn sm" href="../#apply">Apply <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       §1 HERO — two-column hero. Copy left, three-card SVG stack
+       right. "AI layer" carries the display <em> accent + the
+       ai-mark SVG draw-in scribble (reused from the home page hero
+       as a continuity cue from the "AI team" line that links here).
+       ============================================================ -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">PEAK · AI platform</div>
+        <h1 class="display">
+          We've built the <em class="ai-mark">AI layer</em>. It's already running on 100M+ ft².
+        </h1>
+        <p class="hero-sub">
+          Point tagging that skips the six-month project. Fault detection running billions of
+          real-time checks. An Analyst Agent your team queries in plain English. All running
+          today.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="../#fit">Book a partner fit call <span class="arrow">→</span></a>
+          <!-- TODO: replace # with the real support.cim.io/...peak-mcp-server URL before publish. -->
+          <a class="btn ghost" href="#">Connect to PEAK MCP <span class="arrow">→</span></a>
+        </div>
+      </div>
+
+      <div class="ai-hero-visual" aria-hidden="true">
+        <img src="./assets/hero-analyst-agent.svg"
+             alt=""
+             width="600"
+             height="700" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       §2 STAT STRIP — three engineered figures, .block.alt to
+       break visual rhythm before §3 Warpspeed.
+       ============================================================ -->
+  <section class="block alt">
+    <div class="wrap">
+      <div class="ai-stats">
+        <div class="ai-stat">
+          <div class="big">109M</div>
+          <div class="lbl">parameter LLM trained for buildings</div>
+        </div>
+        <div class="ai-stat">
+          <div class="big">20M+</div>
+          <div class="lbl">sensors tagged automatically</div>
+        </div>
+        <div class="ai-stat">
+          <div class="big">Billions</div>
+          <div class="lbl">of real-time checks per portfolio, per year</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       §3 AI TODAY · WARPSPEED — two-column copy + before/after SVG.
+       ============================================================ -->
+  <section class="block">
+    <div class="wrap">
+      <div class="ai-warpspeed">
+        <div>
+          <div class="eyebrow">AI today · The foundation</div>
+          <h2 class="section-h">Trusted data is the hard part. We solved it with <em>Warpspeed</em>.</h2>
+          <p class="section-sub">
+            Building data is chaotic. Every system, every sensor, every vendor labels things
+            differently. <strong>Warpspeed</strong> is our 109M-parameter language model, trained
+            specifically for buildings on 20M+ sensors and ten years of operational data,
+            classifying every point against one unified ontology.
+          </p>
+          <p class="section-sub">
+            It turns unstructured sensor feeds into clean, structured data. Every real-time point
+            has meaning, context, and relationships.
+          </p>
+          <p class="section-sub">
+            Transparent, not a black box. Every prediction is validated and trained by engineers.
+            <strong>This is the foundation everything else on this page runs on.</strong>
+          </p>
+        </div>
+
+        <div class="ai-warpspeed-visual">
+          <img src="./assets/warpspeed-before-after.svg"
+               alt="Raw vendor strings on the left, mapped to a unified ontology on the right via per-row green arrows."
+               width="600"
+               height="320" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       §4 AI TODAY · REASONING — deliberately short, narrow,
+       no visual. Sets up the centrepiece below as the page's
+       main visual moment. .block.alt to break Section 3 → 5
+       same-fill smush.
+       ============================================================ -->
+  <section class="block alt">
+    <div class="wrap">
+      <div class="ai-narrow">
+        <div class="eyebrow">AI today · Reasoning</div>
+        <h2 class="section-h">Every fault pattern in your new asset is already known.</h2>
+        <p class="section-sub">
+          Rules library refined across hundreds of millions of square feet of deployed assets
+          globally, running billions of automated real-time checks. Every fault pattern in your
+          new asset is already known from the buildings we run.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       §5 THE ANALYST AGENT — page centrepiece. One outer .block,
+       single eyebrow, five sub-blocks: sub-hero → video → logo
+       strip → value props → Skills → Trust. Light bg only —
+       DESIGN.md forbids a fourth inverted-panel variant.
+       ============================================================ -->
+  <section class="block" id="analyst-agent">
+    <div class="wrap">
+      <!-- 5a. Sub-hero -->
+      <div class="ai-centrepiece-subhero">
+        <div class="eyebrow">The Analyst Agent</div>
+        <h2 class="section-h">Bring PEAK into any AI assistant.</h2>
+        <p class="section-sub">
+          Connect Claude, ChatGPT, or Microsoft Copilot to your portfolio through the Model
+          Context Protocol. Ask questions in plain English and get structured answers drawn from
+          live PEAK data. No dashboards, no CSV exports, no context switching.
+        </p>
+      </div>
+
+      <!-- Centrepiece video — Vimeo embed, square aspect capped at 720px.
+           Autoplay muted + looped, dnt=1 to suppress Vimeo's analytics. -->
+      <div class="ai-vimeo-wrap">
+        <div class="ai-vimeo-frame">
+          <iframe
+            src="https://player.vimeo.com/video/1191810559?autoplay=1&loop=1&muted=1&background=0&dnt=1"
+            title="PEAK Analyst Agent — ask, drill down, deep-link, draft"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <p class="ai-vimeo-caption">
+          Ask. Drill down. Deep-link to PEAK. Draft the follow-up. All in one chat.
+        </p>
+      </div>
+
+      <!-- 5b. AI client logo strip — text wordmarks, .logos pattern. -->
+      <p class="ai-logo-lead">Works with the AI clients your team already uses.</p>
+      <div class="ai-logos">
+        <div class="ai-logo-cell">Claude</div>
+        <div class="ai-logo-cell">ChatGPT</div>
+        <div class="ai-logo-cell">Microsoft Copilot</div>
+      </div>
+
+      <!-- 5c. Three value-props. -->
+      <div class="ai-valueprops">
+        <div class="ai-valueprop">
+          <h3>Ask your portfolio in plain English.</h3>
+          <p>
+            Triage urgent alerts, chase open actions, check site health, all without leaving the
+            chat. Filter by client, site, priority, assignee, status, impact, equipment, or date
+            range, from natural language.
+          </p>
+        </div>
+        <div class="ai-valueprop">
+          <h3>Stay in the tools your team already uses.</h3>
+          <p>
+            Claude, ChatGPT, or Microsoft Copilot. Any AI client that supports MCP works with the
+            same connection URL. No new dashboard to learn. No tab to keep open.
+          </p>
+        </div>
+        <div class="ai-valueprop">
+          <h3>Permissions follow your login.</h3>
+          <p>
+            The Analyst Agent inherits your existing PEAK access. You only see the sites and
+            tickets your account already has rights to. No separate data grants, no shadow access.
+          </p>
+        </div>
+      </div>
+
+      <!-- 5d. Skills. -->
+      <div class="ai-skills">
+        <h3>Extend with skills.</h3>
+        <p>
+          Skills are an emerging standard for packaging reusable prompts and workflows into AI
+          assistants. Build your own for any recurring portfolio question you ask PEAK. Install
+          once, invoke with a slash command, and the same analysis runs the same way every time,
+          across your team and every chat.
+        </p>
+        <p>
+          <strong>Featured skill: peak-ops.</strong> A portfolio operations dashboard. Structured
+          rollups of priority alert tickets, assignee load, and unresolved issues across your
+          sites, with follow-up drilldowns by site, equipment type, or equipment name.
+        </p>
+
+        <div class="ai-codeblock">/peak-ops what requires attention across my sites?</div>
+
+        <p class="ai-skills-close">
+          One slash command. The same rollup every Monday morning.
+          <!-- TODO: real support.cim.io install-guide URL before publish. -->
+          <a href="#">Read the install guide →</a>
+        </p>
+      </div>
+
+      <!-- 5e. Trust close. -->
+      <div class="ai-trust">
+        <h3>Secured by the access you already have.</h3>
+        <p>
+          OAuth 2.0 authentication, permissions inherited from your existing PEAK login, no
+          separate data grants.
+          <!-- TODO: real support.cim.io security-overview URL before publish. -->
+          <a href="#">Read the security overview →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       §6 AI ROADMAP — two stacked sub-blocks: Compliance Agent
+       and Optimization Agent. .block.alt.
+       ============================================================ -->
+  <section class="block alt">
+    <div class="wrap">
+      <!-- 6a. Compliance Agent. -->
+      <div class="ai-roadmap-block">
+        <div class="eyebrow">AI roadmap · Next</div>
+        <h2 class="section-h">The Compliance Agent.</h2>
+        <p>
+          The Analyst Agent answers when you ask. The Compliance Agent acts without being asked,
+          triaging incoming faults, assigning ownership, chasing close-out, and driving the
+          completion rates MBCx retainers live or die on. <strong>Early partner deployments
+          running today.</strong>
+        </p>
+      </div>
+
+      <!-- 6b. Optimization Agent. LBNL wordmark inline before the partnership sentence. -->
+      <div class="ai-roadmap-block">
+        <div class="eyebrow">AI roadmap · Later</div>
+        <h2 class="section-h">The Optimization Agent.</h2>
+        <p>
+          Once faults are triaged and assigned, the next question is whether they need a truck
+          roll at all. The Optimization Agent resolves faults programmatically, tuning setpoints,
+          schedules, and control sequences from the cloud, with every change auditable and
+          reversible.
+        </p>
+        <p>
+          <span class="ai-lbnl">Lawrence Berkeley National Laboratory</span>
+          <strong>Working with LBNL.</strong>
+          PEAK is collaborating with LBNL's <em>Transforming Building Controls</em> program,
+          advancing the safety, verification, and automated-fix research that closed-loop building
+          optimisation depends on.
+          <a href="https://transformingbuildingcontrols.lbl.gov/" target="_blank" rel="noopener">Visit
+          transformingbuildingcontrols.lbl.gov →</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       §7 CLOSE — four-beat headline + Partner-Surge CTA pair
+       restoring "Apply →" primary / "Book a partner fit call"
+       secondary order. Reuses .final-cta.
+       ============================================================ -->
+  <section class="final-cta">
+    <div class="wrap">
+      <div class="eyebrow">Come deliver it</div>
+      <h2>Ask, answer, act, fix.</h2>
+      <p>
+        The Analyst Agent answers what your team asks today. The Compliance Agent acts on what
+        your team can't get to. The Optimization Agent closes the loop without a truck roll.
+        Every layer of the stack runs on Warpspeed-cleaned data and an FDD library refined
+        across 100M+ ft².
+        <br /><br />
+        <strong>You don't build this. You deliver it.</strong>
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="../#apply">Apply to the partner program <span class="arrow">→</span></a>
+        <a class="btn ghost" href="../#fit">Book a partner fit call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER — duplicated from the home page.
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-col foot-brand">
+          <div class="brand">
+            <img src="../assets/cim-logo-white.svg" alt="CIM" />
+            <span class="product">PEAK</span>
+          </div>
+          <p>
+            The fully-managed FDD and MBCx platform services firms deliver outcomes on.
+            Built by CIM.
+          </p>
+        </div>
+        <div class="foot-col">
+          <h3>Platform</h3>
+          <ul>
+            <li><a href="../#platform">Auto-commissioning</a></li>
+            <li><a href="../#platform">FDD rules library</a></li>
+            <li><a href="./">AI skills (MCP)</a></li>
+            <li><a href="./#analyst-agent">Compliance Agent</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h3>Partners</h3>
+          <ul>
+            <li><a href="../#apply">Partner program</a></li>
+            <li><a href="../#economics">Economics</a></li>
+            <li><a href="../#fit">Partner fit call</a></li>
+            <li><a href="#">Case studies</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="#">About CIM</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Legal</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <div>© CIM Enviro. PEAK is a product of CIM.</div>
+        <div>Built for RCx and MBCx firms.</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <style>
+    .eyebrow {
+      font-family: 'Inter', 'Helvetica Neue', system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      fill: #6b7280;
+    }
+    .eyebrow-green {
+      font-family: 'Inter', 'Helvetica Neue', system-ui, sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      fill: #0f6b4d;
+    }
+    .mono-raw {
+      font-family: 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
+      font-size: 12px;
+      fill: #9ca3af;
+    }
+    .mono-clean {
+      font-family: 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
+      font-size: 12px;
+      fill: #111827;
+    }
+    .ellipsis {
+      font-family: 'JetBrains Mono', 'Menlo', 'Consolas', monospace;
+      font-size: 12px;
+      fill: #d1d5db;
+    }
+  </style>
+
+  <!-- Column headers -->
+  <text x="20" y="28" class="eyebrow">RAW VENDOR DATA</text>
+  <text x="340" y="28" class="eyebrow-green">WARPSPEED ONTOLOGY</text>
+
+  <!-- ROW 1 -->
+  <text x="20" y="74" class="mono-raw">CH-01.SUP_TMP</text>
+  <line x1="288" y1="70" x2="318" y2="70" stroke="#0f6b4d" stroke-width="1.2"/>
+  <path d="M 314 66 L 318 70 L 314 74" stroke="#0f6b4d" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="340" y="74" class="mono-clean">Chiller · Supply Temp</text>
+
+  <!-- ROW 2 -->
+  <text x="20" y="106" class="mono-raw">AHU1_DA_T</text>
+  <line x1="288" y1="102" x2="318" y2="102" stroke="#0f6b4d" stroke-width="1.2"/>
+  <path d="M 314 98 L 318 102 L 314 106" stroke="#0f6b4d" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="340" y="106" class="mono-clean">AHU · Discharge Air Temp</text>
+
+  <!-- ROW 3 -->
+  <text x="20" y="138" class="mono-raw">L04_CHR_CT-04_2_LeavingT</text>
+  <line x1="288" y1="134" x2="318" y2="134" stroke="#0f6b4d" stroke-width="1.2"/>
+  <path d="M 314 130 L 318 134 L 314 138" stroke="#0f6b4d" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="340" y="138" class="mono-clean">Chiller · Leaving Temp</text>
+
+  <!-- ROW 4 -->
+  <text x="20" y="170" class="mono-raw">NIE-B5/Daikin.FCU.AI-265</text>
+  <line x1="288" y1="166" x2="318" y2="166" stroke="#0f6b4d" stroke-width="1.2"/>
+  <path d="M 314 162 L 318 166 L 314 170" stroke="#0f6b4d" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="340" y="170" class="mono-clean">FCU · Compressor Power</text>
+
+  <!-- ROW 5 -->
+  <text x="20" y="202" class="mono-raw">23606_Analog-Input</text>
+  <line x1="288" y1="198" x2="318" y2="198" stroke="#0f6b4d" stroke-width="1.2"/>
+  <path d="M 314 194 L 318 198 L 314 202" stroke="#0f6b4d" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="340" y="202" class="mono-clean">Sensor · Pressure</text>
+
+  <!-- ROW 6 -->
+  <text x="20" y="234" class="mono-raw">L12_CBA_VFD_Hz</text>
+  <line x1="288" y1="230" x2="318" y2="230" stroke="#0f6b4d" stroke-width="1.2"/>
+  <path d="M 314 226 L 318 230 L 314 234" stroke="#0f6b4d" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="340" y="234" class="mono-clean">VFD · Frequency</text>
+
+  <!-- ROW 7 ellipsis -->
+  <text x="20" y="266" class="ellipsis">...</text>
+  <text x="340" y="266" class="ellipsis">...</text>
+
+  <!-- Bottom caption -->
+  <line x1="20" y1="295" x2="580" y2="295" stroke="#e5e7eb"/>
+  <text x="20" y="312" class="eyebrow">20M+ SENSORS · ONE ONTOLOGY · CLASSIFIED IN REAL TIME</text>
+</svg>
