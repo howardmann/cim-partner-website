@@ -30,6 +30,27 @@
     display: block;
   }
 
+  /* --- §2 Stat strip head — short eyebrow + headline that anchors
+       the three figures so they don't read as floating metrics. --- */
+  .ai-stats-head {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .ai-stats-head .eyebrow {
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  .ai-stats-h {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -0.012em;
+    line-height: 1.3;
+    margin: 0;
+    color: var(--color-ink);
+  }
+
   /* --- §2 Stat strip --- */
   .ai-stats {
     display: grid;
@@ -90,23 +111,156 @@
     margin: 0 auto;
   }
 
-  /* --- §5 Centrepiece outer rhythm ---
-     One outer .block holds five sub-blocks. Spacing between sub-
-     blocks is internal margin; the section gets a single eyebrow
-     at the top and no internal dividers (the composition reads as
-     one centrepiece, not five sections). */
-  .ai-centrepiece-subhero {
+  /* --- §4 Foundation — stacked composition:
+         head (eyebrow + h2 + lead) → full-width graphic → body. */
+  .ai-foundation-head,
+  .ai-foundation-body {
+    max-width: 820px;
+  }
+
+  .ai-foundation-head {
     margin-bottom: 56px;
   }
 
-  /* §5a Vimeo embed.
-     Source is square (ai_analyst_square.mp4 on Vimeo), so the
-     wrapper is capped at a comfortable read width rather than
-     stretched to 85% of the column. Caption sits below in
-     low-emphasis italic-grey. */
-  .ai-vimeo-wrap {
-    max-width: 720px;
+  .ai-foundation-visual {
+    margin: 0 0 56px;
+  }
+
+  .ai-foundation-visual img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
     margin: 0 auto;
+  }
+
+  .ai-foundation-body p {
+    margin-bottom: 20px;
+  }
+
+  .ai-foundation-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Warpspeed sub-block — sits beneath the Rules Engine inside §4,
+     separated by a hairline so the two stories read as related but
+     distinct ("here's the engine, here's what feeds it"). */
+  .ai-foundation-warpspeed {
+    margin-top: 64px;
+    padding-top: 56px;
+    border-top: 1px solid var(--color-line);
+  }
+
+  .ai-foundation-warpspeed h3 {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.018em;
+    margin: 0 0 18px;
+    line-height: 1.2;
+  }
+
+  .ai-foundation-warpspeed h3 em {
+    font-style: normal;
+    color: var(--color-accent);
+  }
+
+  .ai-foundation-warpspeed p {
+    font-size: 16px;
+    color: var(--color-ink-2);
+    line-height: 1.65;
+    margin: 0 0 16px;
+    max-width: 560px;
+  }
+
+  .ai-foundation-warpspeed p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* --- §3 Centrepiece outer rhythm ---
+     One outer .block holds the sub-hero + four follow-on blocks.
+     Spacing between blocks is internal margin; the section gets a
+     single eyebrow at the top (inside the sub-hero) and no internal
+     dividers — composition reads as one centrepiece, not five. */
+
+  /* Sub-hero: copy-left / square-video-right (Atlassian MCP pattern).
+     Right column is fixed-width so the Vimeo square frame doesn't
+     collapse against the flexible left column. */
+  .ai-centrepiece-hero {
+    display: grid;
+    grid-template-columns: 1fr 520px;
+    gap: 56px;
+    align-items: center;
+    margin-bottom: 88px;
+  }
+
+  .ai-centrepiece-copy .section-sub {
+    margin-bottom: 28px;
+  }
+
+  .ai-centrepiece-video {
+    width: 100%;
+    max-width: 520px;
+    justify-self: end;
+  }
+
+  /* When the sub-hero video is in the right column, its caption sits
+     left-aligned beneath the frame rather than centered. */
+  .ai-centrepiece-video .ai-vimeo-caption {
+    text-align: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* AI client logos tucked under the centrepiece CTA — quiet "works
+     with" cue rather than a full-width separate row below the hero. */
+  .ai-clients-inline {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .ai-clients-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+  }
+
+  .ai-clients-inline img {
+    height: 22px;
+    width: auto;
+    display: block;
+  }
+
+  /* Value-props intro — short eyebrow + h3 above the cell grid so
+     the three columns read as a section, not floating cards. */
+  .ai-valueprops-intro {
+    margin-top: 80px;
+    margin-bottom: 32px;
+    max-width: 760px;
+  }
+
+  .ai-valueprops-intro .eyebrow {
+    margin-bottom: 14px;
+  }
+
+  .ai-section-h {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.018em;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--color-ink);
+  }
+
+  /* When intro sits directly above the cell grid, kill the grid's
+     own top margin so the spacing is owned by the intro. */
+  .ai-valueprops-intro + .ai-valueprops {
+    margin-top: 0;
   }
 
   .ai-vimeo-frame {
@@ -159,11 +313,25 @@
   .ai-logo-cell {
     background: #ffffff;
     padding: 28px 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 110px;
+  }
+
+  .ai-logo-cell img {
+    height: 28px;
+    width: auto;
+    display: block;
+  }
+
+  .ai-logo-cell span {
     font-weight: 600;
     letter-spacing: -0.005em;
-    font-size: 16px;
-    color: var(--color-muted);
+    font-size: 14px;
+    color: var(--color-ink);
   }
 
   /* §5c three-column value props — same 1px-gap pattern. */
@@ -199,16 +367,20 @@
     margin: 0;
   }
 
-  /* §5d Skills. */
+  /* §3d Skills — compact: eyebrow, h3, lead sentence, code, outcome. */
   .ai-skills {
     margin-top: 80px;
+  }
+
+  .ai-skills .eyebrow {
+    margin-bottom: 14px;
   }
 
   .ai-skills h3 {
     font-size: 26px;
     font-weight: 700;
     letter-spacing: -0.018em;
-    margin: 0 0 18px;
+    margin: 0 0 14px;
     line-height: 1.2;
   }
 
@@ -280,22 +452,65 @@
     margin: 0 0 16px;
   }
 
-  /* LBNL inline wordmark — text replacement for the logo lockup. */
-  .ai-lbnl {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--color-ink);
-    margin-right: 12px;
-    white-space: nowrap;
+  /* LBNL partnership callout — pulled out of the Optimization Agent
+     body so the research partnership reads as social proof, not a
+     footnote. Bg-alt fill + 3px accent left bar matches DESIGN.md's
+     .callout pattern. */
+  .ai-lbnl-callout {
+    margin-top: 64px;
+    padding: 28px 32px;
+    background: var(--color-bg-alt);
+    border-left: 3px solid var(--color-accent);
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .ai-lbnl-logo-large {
+    height: 56px;
+    width: auto;
+    display: block;
+  }
+
+  .ai-lbnl-body .eyebrow {
+    margin-bottom: 10px;
+  }
+
+  .ai-lbnl-body h4 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .ai-lbnl-body p {
+    font-size: 15px;
+    color: var(--color-ink-2);
+    margin: 0;
+    line-height: 1.65;
   }
 
   /* --- Responsive collapses --- */
   @media (max-width: 980px) {
     .ai-hero-visual {
       display: none;
+    }
+
+    .ai-centrepiece-hero {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-bottom: 64px;
+    }
+
+    .ai-centrepiece-video {
+      max-width: 100%;
+      justify-self: stretch;
+    }
+
+    .ai-centrepiece-video .ai-vimeo-caption {
+      text-align: center;
     }
 
     .ai-warpspeed {
@@ -307,6 +522,16 @@
     .ai-logos,
     .ai-valueprops {
       grid-template-columns: 1fr;
+    }
+
+    .ai-lbnl-callout {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 24px 24px;
+    }
+
+    .ai-clients-inline {
+      gap: 16px;
     }
 
     .ai-stat {
